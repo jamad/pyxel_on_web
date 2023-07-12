@@ -3,6 +3,7 @@
 |content|code|playable build|
 |-|-|-|
 |move the rect while holding right arrow|[move_character_01.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_01.py)|[move_character_01](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_01)|
+|move the rect at mouse position|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|[move_character_02](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|
 
 
 ## reference
