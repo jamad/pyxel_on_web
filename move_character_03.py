@@ -3,7 +3,7 @@ import pyxel
 class App:
     def __init__(self): 
         pyxel.init(160, 120, title="move rect by arrow keys")
-        self.x = self.y = 0
+        self.x , self.y= (80 , 60)
         pyxel.run(self.update, self.draw) 
 
     def update(self): # calc data
