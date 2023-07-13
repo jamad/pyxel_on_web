@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
+import sys
+print(sys.executable)
+#exit()
+
 import pyxel
-pyxel.init(128, 128, caption="invader", scale=4, fps=5)
-pyxel.load("invader_resource.pyxres")
+pyxel.init(128, 128, title="invader", display_scale=2, fps=6)
+pyxel.load("assets/practice_invader.pyxres")
 def update():
 	"""NONE"""
 def draw():
