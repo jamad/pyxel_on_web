@@ -2,10 +2,10 @@
 
 |content|code|playable build|
 |-|-|-|
-|move the rect while holding right arrow|[move_character_01.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_01.py)|[move_character_01](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_01)|
-|move the rect at mouse position|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|[move_character_02](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|
-|move the rect by arrow keys|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|[move_character_03](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|
-|sprite animation + text display|[move_character_04.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|[move_character_04](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|
+|右矢印キーを押す間、四角が移動|[move_character_01.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_01.py)|[move_character_01](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_01)|
+|マウスの位置に、四角が移動|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|[move_character_02](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|
+|矢印キーで四角を移動|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|[move_character_03](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|
+|spriteアニメーション + テキスト表示|[move_character_04.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|[move_character_04](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|
 
 
 ## reference
