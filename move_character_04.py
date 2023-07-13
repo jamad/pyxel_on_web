@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
-import sys
-print(sys.executable)
-#exit()
 import pyxel
+import sys
+print(sys.executable) # check which pything is running
 
 # constant variables
 screen_width=160
 screen_height=120
 character_width=11
 character_height=8
-
 my_disp_scale=2
 my_fps=60
+my_asset="assets/practice_invader.pyxres"
 
 class App:
     
     def __init__(self): 
-        pyxel.init(screen_width, 120, title="invader", display_scale=my_disp_scale, fps=my_fps)
-        pyxel.load("assets/practice_invader.pyxres")
+        pyxel.init(screen_width, screen_height, title="invader", display_scale=my_disp_scale, fps=my_fps)
+        pyxel.load(my_asset)
         
         self.image_posY_to_draw= 0
         pyxel.run(self.update, self.draw) 
