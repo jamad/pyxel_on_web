@@ -2,7 +2,6 @@
 
 |playable content|preview|code|
 |-|-|-|
-|[右矢印キーを押す間、四角が移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_01)|[move_character_01.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_01.py)|　
 |[マウスの位置に、四角が移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
 |[矢印キーで四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
 |[spriteアニメーション + テキスト表示](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/8a29f579-27eb-4794-b2d4-b5eee80ed7e8)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
