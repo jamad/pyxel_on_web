@@ -11,6 +11,7 @@ character_height=8
 my_disp_scale=2
 my_fps=60
 my_asset="assets/practice_invader.pyxres"
+character_posY=30
 
 class App:
     
@@ -28,10 +29,10 @@ class App:
         pyxel.cls(0)# clear screen
         speedX=5
         posX = (pyxel.frame_count //speedX) % pyxel.width
-        pyxel.blt(posX , 60, 0, 0, self.image_posY_to_draw, 11, 8, 0)
+        pyxel.blt(posX , character_posY, 0, 0, self.image_posY_to_draw, 11, 8, 0)
         
         if screen_width - character_width < posX: # double drawing if not full drawing
-            pyxel.blt(posX -screen_width , 60, 0, 0, self.image_posY_to_draw, 11, 8, 0)
+            pyxel.blt(posX -screen_width , character_posY, 0, 0, self.image_posY_to_draw, 11, 8, 0)
 
         pyxel.text(10, 10, "FRAME COUNT: "+str(pyxel.frame_count), 10)
 
