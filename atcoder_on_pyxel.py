@@ -1,27 +1,6 @@
 # practicePython\atcoder\at_coder_input_sample.py
 
-import io
-import sys
 
-_INPUT = """\
-2
-1 2 3
-aaa
-"""
-
-sys.stdin = io.StringIO(_INPUT)
-
-a=int(input())
-b=list(map(int, input().split()))
-c=list(input())
-print(a)
-print(b)
-print(c)
-
-# 出力
-2
-[1, 2, 3]
-['a', 'a', 'a']
 
 
 ###
@@ -38,22 +17,37 @@ my_disp_scale=2
 my_fps=60
 
 # for this app
-from time import gmtime, strftime
+import io
+import sys
+
+_INPUT = """\
+2
+1 2 3
+aaa
+"""
+
+sys.stdin = io.StringIO(_INPUT)
+
+a=int(input())
+b=list(map(int, input().split()))
+c=list(input())
+
 
 class App:
     
     def __init__(self): 
         pyxel.init(screen_width, screen_height, title="time display", display_scale=my_disp_scale, fps=my_fps)
-        self.my_time="-" # initial declaration for time to display
         pyxel.run(self.update, self.draw) 
 
     def update(self):            
-        self.my_time=strftime("%Y-%m-%d %H:%M:%S", gmtime()) # update time to display
-        
+        pass
 
     def draw(self): 
         pyxel.cls(0)# clear screen
-        
+
+        #print(a) #2
+        #print(b) #[1, 2, 3]
+        #print(c) #['a', 'a', 'a']
         pyxel.text(10, 0, f" {a}", 10) # display text
         pyxel.text(10, 10, f" {b}", 10) # display text
         pyxel.text(10, 20, f" {c}", 10) # display text
