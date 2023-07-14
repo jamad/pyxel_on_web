@@ -17,6 +17,7 @@
 |playable content|preview|code|
 |-|-|-|
 |[描画サンプル](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.03_draw_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/6a44c863-89ba-4c53-89ec-dc747f18ef14)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/03_draw_api.py)|
+|[playable content](https://kitao.github.io/pyxel/wasm/examples/8bit-bgm-gen.html)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/63ff561a-20d5-491a-9d03-470c2cf07ce7)|[code](https://github.com/shiromofufactory/8bit-bgm-generator)|
 |[サウンドサンプル](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.04_sound_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/85fcaa5e-4cdc-4964-b652-eae045ae10af)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/04_sound_api.py)|
 |[色パレット](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.05_color_palette)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/8b5dac4b-aa0e-48be-b2bc-ff9beb0bc7a9)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/05_color_palette.py)|
 |[泡クリックゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.06_click_game)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/6af4e966-3924-4745-8425-763626f5a026)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/06_click_game.py)|
