@@ -17,6 +17,10 @@
 |playable link|code|
 |-|-|
 |[![image](https://github.com/jamad/pyxel_on_web/assets/949913/6a44c863-89ba-4c53-89ec-dc747f18ef14)](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.03_draw_api)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/03_draw_api.py)|
+|[![image](https://github.com/jamad/pyxel_on_web/assets/949913/85fcaa5e-4cdc-4964-b652-eae045ae10af)](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.04_sound_api)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/04_sound_api.py)|
+
+
+
 
 
 
