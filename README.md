@@ -21,6 +21,7 @@
 |[色パレット](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.05_color_palette)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/8b5dac4b-aa0e-48be-b2bc-ff9beb0bc7a9)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/05_color_palette.py)|
 |[泡クリックゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.06_click_game)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/6af4e966-3924-4745-8425-763626f5a026)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/06_click_game.py)|
 |[スネークゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.07_snake)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/fc313c9c-a642-4e1f-8395-6889d49cd5a4)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/07_snake.py)|
+|[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.08_triangle_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e2c88562-981a-46f3-8d3f-1f7528e2bd8b)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/08_triangle_api.py)|
 
 
 
