@@ -4,14 +4,14 @@ import sys
 print(sys.executable) # check which pything is running
 
 # constant variables
-screen_width=160
-screen_height=120
+screen_width=128
+screen_height=32
 character_width=11
 character_height=8
 my_disp_scale=2
 my_fps=60
 my_asset="assets/practice_invader.pyxres"
-character_posY=30
+character_posY=20
 
 class App:
     
@@ -34,6 +34,6 @@ class App:
         if screen_width - character_width < posX: # double drawing if not full drawing
             pyxel.blt(posX -screen_width , character_posY, 0, 0, self.image_posY_to_draw, 11, 8, 0)
 
-        pyxel.text(10, 10, "FRAME COUNT: "+str(pyxel.frame_count), 10)
+        pyxel.text(10, 5, "FRAME COUNT: "+str(pyxel.frame_count), 10)
 
 App()
