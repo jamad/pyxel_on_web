@@ -27,6 +27,9 @@
 |[音付き横スクロールアクションゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.10_platformer)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/54ab0a5c-6f6f-49b5-b723-d7daa2dd37a0)|code|
 |[offscreen sample](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.11_offscreen)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/1e12b3c4-cd41-460c-80a1-10629d8c17a9)![image](https://github.com/jamad/pyxel_on_web/assets/949913/a5ed9eec-03e2-47cd-b350-3c3bcc4c80dd)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/11_offscreen.py)|
 |[ノイズサンプル](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.12_perlin_noise)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/1028f1c5-012d-42a4-bdc7-b6877e9229f0)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/12_perlin_noise.py)|
+|[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.13_bitmap_font)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/dfc3c532-1f68-4af1-afeb-79548a410270)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/13_bitmap_font.py)|
+
+
 
 
 
