@@ -22,6 +22,8 @@
 |[泡クリックゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.06_click_game)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/6af4e966-3924-4745-8425-763626f5a026)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/06_click_game.py)|
 |[スネークゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.07_snake)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/fc313c9c-a642-4e1f-8395-6889d49cd5a4)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/07_snake.py)|
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.08_triangle_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e2c88562-981a-46f3-8d3f-1f7528e2bd8b)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/08_triangle_api.py)|
+|[BGM付shooterゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.09_shooter)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/abbafd32-ab67-4816-ae14-a7cb185748e3)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/09_shooter.py)|
+
 
 
 
