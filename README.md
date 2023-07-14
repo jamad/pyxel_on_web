@@ -17,6 +17,7 @@
 
 ## reference
 * https://github.com/kitao/pyxel/tree/main/python/pyxel/examples
+* https://github.com/kitao/pyxel/wiki/Pyxel-User-Examples
 
 |playable content|preview|code|
 |-|-|-|
