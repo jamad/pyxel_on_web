@@ -34,6 +34,10 @@
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.13_bitmap_font)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/dfc3c532-1f68-4af1-afeb-79548a410270)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/13_bitmap_font.py)|
 
 
+|[playable content](https://aged99oow.itch.io/typing)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/72cd9874-0cad-4dbd-a590-d8e5b82c94e2)|code|
+
+
+
 
 
 
