@@ -1,9 +1,3 @@
-# practicePython\atcoder\at_coder_input_sample.py
-
-
-
-
-###
 
 # -*- coding: utf-8 -*-
 import pyxel
@@ -17,6 +11,8 @@ my_disp_scale=2
 my_fps=60
 
 # for this app
+# input simulation practicePython\atcoder\at_coder_input_sample.py
+
 import io
 import sys
 
