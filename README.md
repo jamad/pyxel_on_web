@@ -1,3 +1,6 @@
+* quick note
+* .pyxpal  で　[カラーパレットを変更できるらしい](https://github.com/kitao/pyxel/issues/432#issuecomment-1358841241)　
+
 # pyxel_on_web
 
 |playable content|preview|code|
