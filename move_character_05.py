@@ -1,27 +1,30 @@
-#
+# -*- coding: utf-8 -*-
+import pyxel
+import sys
+print(sys.executable) # check which pything is running
 
-def main():
-  N=int(input())
-  A=[[*map(int,input())]for i in range(N)]
-  D=[]
-  for _ in range(4):
-      D+=A[0][:N-1]
-      A=[*zip(*A)][::-1]
-  D=[D[-1]]+D[:-1]
-  for _ in range(4):
-      A=[*map(list,A)]
-      for i in range(N-1):A[0][i]=D[i]
-      D,A=D[N-1:],[*zip(*A)][::-1]
-  for x in A:print(''.join(map(str,x)))
+# constant variables (rare to change)
+screen_width=160
+screen_height=120
+my_disp_scale=2
+my_fps=60
 
+# for this app
+from time import gmtime, strftime
 
-'''
-4
-0101
-1101
-1111
-0000
+class App:
+    
+    def __init__(self): 
+        pyxel.init(screen_width, screen_height, title="time display", display_scale=my_disp_scale, fps=my_fps)
+        self.my_time="-" # initial declaration for time to display
+        pyxel.run(self.update, self.draw) 
 
-'''
+    def update(self):            
+        self.my_time=strftime("%Y-%m-%d %H:%M:%S", gmtime()) # update time to display
+        
 
-for 
+    def draw(self): 
+        pyxel.cls(0)# clear screen
+        pyxel.text(10, 10, f"TIME: {self.my_time}", 10) # display text
+
+App()
