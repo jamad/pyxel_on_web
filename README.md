@@ -20,8 +20,7 @@
 |[link](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.04_sound_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/85fcaa5e-4cdc-4964-b652-eae045ae10af)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/04_sound_api.py)|
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.05_color_palette)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/8b5dac4b-aa0e-48be-b2bc-ff9beb0bc7a9)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/05_color_palette.py)|
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.06_click_game)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/6af4e966-3924-4745-8425-763626f5a026)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/06_click_game.py)|
-
-|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/fc313c9c-a642-4e1f-8395-6889d49cd5a4)
+|[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.07_snake)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/fc313c9c-a642-4e1f-8395-6889d49cd5a4)
 |[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/07_snake.py)|
 
 
