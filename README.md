@@ -24,6 +24,7 @@
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.08_triangle_api)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e2c88562-981a-46f3-8d3f-1f7528e2bd8b)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/08_triangle_api.py)|
 |[BGM付shooterゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.09_shooter)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/abbafd32-ab67-4816-ae14-a7cb185748e3)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/09_shooter.py)|
 |[ジャンプゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.02_jump_game)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/8009e3f1-ac2b-41d1-aff8-06ae03a4df82)|[code](https://github.com/kitao/pyxel/blob/main/python/pyxel/examples/02_jump_game.py)|
+|[音付き横スクロールアクションゲーム](https://kitao.github.io/pyxel/wasm/launcher/?run=kitao.pyxel.python.pyxel.examples.10_platformer)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/54ab0a5c-6f6f-49b5-b723-d7daa2dd37a0)|code|
 
 
 
