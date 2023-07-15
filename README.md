@@ -5,11 +5,11 @@
 |playable content|preview|code|
 |-|-|-|
 |[playable content(but it seems showing the first revision)](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.custom_palette_gradation)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_palette_gradation.py)|
-|[現在の時間をテキストで表示](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
-|[マウス位置で四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
-|[矢印キーで四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
-|[spriteアニメーション + テキスト表示](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e5a8d646-b448-4b76-b123-b79dc1a23216)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
-|[atcoder入力と出力](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
+|[current time by text](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
+|[move rect by mouse pos](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
+|[move rect by arrow keys](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
+|[sprite anim + text disp](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e5a8d646-b448-4b76-b123-b79dc1a23216)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
+|[atcoder input/output](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
 |カスタムパレット+アナログ時計|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
 
 
