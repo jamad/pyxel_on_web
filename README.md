@@ -1,6 +1,5 @@
 * quick note
 * .pyxpal  で　[カラーパレットを変更できるらしい](https://github.com/kitao/pyxel/issues/432#issuecomment-1358841241)
-* この人すげーな　https://github.com/aged99oow?tab=repositories
 
 # pyxel_on_web
 
@@ -38,6 +37,7 @@
 |[playable content](https://aged99oow.itch.io/typing)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/72cd9874-0cad-4dbd-a590-d8e5b82c94e2)|[code](https://github.com/aged99oow/typing/tree/main/MiniTyping)|
 
 
+* 参考になる　https://github.com/aged99oow?tab=repositories
 
 
 
