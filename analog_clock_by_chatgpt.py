@@ -4,7 +4,7 @@ import datetime
 
 class App:
     def __init__(self):
-        pyxel.init(200, 200, caption='Analog Clock')
+        pyxel.init(200, 200, title='Analog Clock')
         pyxel.clock(self.update, 60)
         self.current_time = datetime.datetime.now()
 
