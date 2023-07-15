@@ -13,7 +13,7 @@
 |[move rect by mouse pos](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
 |[move rect by arrow keys](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
 |[sprite anim + text disp](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e5a8d646-b448-4b76-b123-b79dc1a23216)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
-|[atcoder input/output](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
+|[input / output](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
 |custom palette + analog clock|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
 
 
