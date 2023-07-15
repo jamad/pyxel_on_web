@@ -20,29 +20,28 @@ art='''\
 '''
 print(art.split())
 
+SCR_W=96
+SCR_H=54
+W=H=16
+
 class App:
     def __init__(self):
-        pyxel.init(96, 54, title="Image by code", display_scale=2)
-        
-        self.x = (96 - 16) // 2
-        self.y = (54 - 16) // 2
-        self.img = 0
-        self.w = self.h = 16
+        pyxel.init(SCR_W, SCR_H, title="Image by code", display_scale=2)
         self.color = 1
-        pyxel.image(0).set(0, 0, art.split())
+        self.img_id = 0
+        pyxel.image(self.img_id).set(0, 0, art.split())
 
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        if pyxel.btnp(pyxel.KEY_SPACE):
-            self.color += 1
-            if 15 <= self.color: self.color = 1
+        self.color += pyxel.btnp(pyxel.KEY_SPACE)
+        if 15 <= self.color: self.color = 1
 
     def draw(self):
         pyxel.cls(0)
         
         pyxel.pal(7, self.color)
-        pyxel.blt(self.x, self.y, self.img, 0, 0, self.w, self.h, 0)
+        pyxel.blt((SCR_W - W) // 2, (SCR_H - H) // 2, self.img_id, 0, 0, W, H, 0)
         pyxel.pal()
 
         pyxel.text(0, 0, 'col change by SPACE: ' + str(self.color), 7)
