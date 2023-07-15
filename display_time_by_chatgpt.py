@@ -3,7 +3,7 @@ import datetime
 
 class App:
     def __init__(self):
-        pyxel.init(160, 120, caption='Time Display')
+        pyxel.init(33, 7, title='Time Display',display_scale=4)
         self.current_time = datetime.datetime.now().strftime('%H:%M:%S')
 
         pyxel.run(self.update, self.draw)
@@ -13,6 +13,6 @@ class App:
 
     def draw(self):
         pyxel.cls(0)
-        pyxel.text(60, 50, self.current_time, 7)
+        pyxel.text(1, 1, self.current_time, 7)
 
 App()
