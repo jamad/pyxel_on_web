@@ -1,5 +1,4 @@
-* quick note
-* .pyxpal  で　[カラーパレットを変更できるらしい](https://github.com/kitao/pyxel/issues/432#issuecomment-1358841241)
+
 
 # pyxel_on_web
 
@@ -10,6 +9,8 @@
 |[矢印キーで四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
 |[spriteアニメーション + テキスト表示](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e5a8d646-b448-4b76-b123-b79dc1a23216)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
 |[atcoder入力と出力](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
+|カスタムパレット+アナログ時計|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
+
 
 
 
