@@ -7,7 +7,7 @@
 
 |playable content|preview|code|
 |-|-|-|
-|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|code|
+|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|[code](https://github.com/jamad/pyxel_on_web/blob/main/art_by_code.py)|
 |[playable content(but the launcher seems looking at the first revision)](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.custom_palette_gradation)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_palette_gradation.py)|
 |[current time by text](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
 |[move rect by mouse pos](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
