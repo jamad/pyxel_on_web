@@ -37,15 +37,20 @@ class App:
 
     def update(self):
         self.color += pyxel.btnp(pyxel.KEY_SPACE)
-        if 15 <= self.color: self.color = 1
+        if 15 < self.color: self.color = 1
 
     def draw(self):
         pyxel.cls(0)
         
-        pyxel.pal() # reset palette
-        pyxel.text(0, 0, 'col change by SPACE: ' + str(self.color), 7)
+        pyxel.pal() # reset palette. now color 7 is white
+        pyxel.text(0, 0, 'SPACE for palette change: ', 7)
         
         pyxel.pal(7, self.color) # override color 7 
-        pyxel.blt((SCR_W - W) // 2, (SCR_H - H) // 2, self.img_id, 0, 0, W, H, 0)
+        pyxel.blt((SCR_W - W) // 2, SCR_H//2 - H, self.img_id, 0, 0, W, H, 0)
+
+        for i in range(8):
+            pyxel.text(i*12,36,str(i),i)
+        for i in range(8,16):
+            pyxel.text((i-8)*12,46,str(i),i)
 
 App()
