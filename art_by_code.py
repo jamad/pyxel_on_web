@@ -23,14 +23,12 @@ print(art.split())
 class App:
     def __init__(self):
         pyxel.init(96, 54, title="Image by code", display_scale=2)
-        #self.niko = Niko()
         
-        self.x = (96 / 2) - (16 / 2)
-        self.y = (54 / 2) - (16 / 2)
+        self.x = (96 - 16) // 2
+        self.y = (54 - 16) // 2
         self.img = 0
-        self.u = self.v = 0
         self.w = self.h = 16
-        self.color = 7
+        self.color = 1
         pyxel.image(0).set(0, 0, art.split())
 
         pyxel.run(self.update, self.draw)
