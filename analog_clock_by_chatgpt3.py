@@ -15,6 +15,15 @@ class App:
     def __init__(self):
         pyxel.init(screen_width, screen_height,display_scale=2)
         pyxel.load('analog_clock_by_chatgpt3.pyxres')
+        
+        print(len(pyxel.colors))
+        
+        for i,x in enumerate( pyxel.colors):
+            print(i,x,hex(x))
+
+        print(pyxel.colors)
+        
+
         self.time_now = datetime.datetime.now()
         pyxel.run(self.update, self.draw)
 
