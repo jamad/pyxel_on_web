@@ -1,63 +1,34 @@
 import pyxel
-from math import radians, cos, sin
-import datetime
 
-clock_r = 28
-screen_width = clock_r*2+3
-screen_height = clock_r*2+3
-background_color=0
-foreground_color=7
-color_red=8
-color_green=11
-color_blue=12
+
 
 class App:
     def __init__(self):
-        pyxel.init(screen_width, screen_height,display_scale=2)
+        pyxel.init(255, 81, title="Pyxel Custom Color Palette",display_scale=1)
         pyxel.load('custom_palette_gradation.pyxres')
-        
-        print(len(pyxel.colors))
-        
-        for i,x in enumerate( pyxel.colors):
-            print(i,x,hex(x))
-
-        print(pyxel.colors)
-        
-
-        self.time_now = datetime.datetime.now()
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.time_now = datetime.datetime.now()
+        pass
 
     def draw(self):
-        pyxel.cls(background_color)
+        pyxel.cls(0)
+        for col in range(16):
+            x,y = 2 + (col % 4) * 64, 4 + (col // 4) * 20
+            
+            rgb = pyxel.colors[col]
+            
+            hex = f"#{rgb:06X}"
+            
+            dec = f"{rgb >> 16},{(rgb >> 8) & 0xFF},{rgb & 0xFF}"
+            
+            #print('debug',col,rgb, hex, dec,len(pyxel.colors))
 
-        # 時計の中心座標
-        cx = cy = clock_r+1
-
-        # 時計の外枠を描画
-        pyxel.circb(cx, cy, clock_r, foreground_color)
-
-
-
-        # 秒針を描画
-        second_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
-        second_x = cx + int(clock_r * 0.9 * cos(radians(second_angle)))
-        second_y = cy + int(clock_r * 0.9 * sin(radians(second_angle)))
-        pyxel.line(cx, cy, second_x, second_y, color_blue)
-
-        # 分針を描画
-        minute_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
-        minute_x = cx + int(clock_r * 0.6 * cos(radians(minute_angle)))
-        minute_y = cy + int(clock_r * 0.6 * sin(radians(minute_angle)))
-        pyxel.line(cx, cy, minute_x, minute_y, color_green)
-
-        # 時針を描画
-        hour_angle = (self.time_now.hour % 12 + self.time_now.minute / 60) * 30 - 90
-        hour_hand_len=clock_r * 0.3
-        hour_dx = int(hour_hand_len * cos(radians(hour_angle)))
-        hour_dy = int(hour_hand_len * sin(radians(hour_angle)))
-        pyxel.line(cx, cy, cx+hour_dx, cy+hour_dy,  color_red)
+            pyxel.rect(x, y, 13, 13, col%16)
+            pyxel.text(x + 16, y + 1, hex, 7)
+            pyxel.text(x + 16, y + 8, dec, 7)
+            pyxel.text(x + 5 - (col // 10) * 2, y + 4, f"{col}", 7 if col < 6 else 0)
+            if col == 0:
+                pyxel.rectb(x, y, 13, 13, 13)
 
 App()
