@@ -4,7 +4,7 @@
 
 |playable content|preview|code|
 |-|-|-|
-|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61)|code|
+|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_palette_gradation.py)|
 |[現在の時間をテキストで表示](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
 |[マウス位置で四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_02)|[move_character_02.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_02.py)|　
 |[矢印キーで四角を移動](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
