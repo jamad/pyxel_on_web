@@ -33,27 +33,27 @@ class App:
     def draw(self):
         pyxel.cls(background_color)
 
-        # 時計の中心座標
+        # center coord
         cx = cy = clock_r+1
 
-        # 時計の外枠を描画
+        # clock outline
         pyxel.circb(cx, cy, clock_r, foreground_color)
 
 
 
-        # 秒針を描画
+        # second hand to disp
         second_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
         second_x = cx + int(clock_r * 0.9 * cos(radians(second_angle)))
         second_y = cy + int(clock_r * 0.9 * sin(radians(second_angle)))
         pyxel.line(cx, cy, second_x, second_y, color_blue)
 
-        # 分針を描画
+        # minute hand to disp
         minute_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
         minute_x = cx + int(clock_r * 0.6 * cos(radians(minute_angle)))
         minute_y = cy + int(clock_r * 0.6 * sin(radians(minute_angle)))
         pyxel.line(cx, cy, minute_x, minute_y, color_green)
 
-        # 時針を描画
+        # hour hand to disp
         hour_angle = (self.time_now.hour % 12 + self.time_now.minute / 60) * 30 - 90
         hour_hand_len=clock_r * 0.3
         hour_dx = int(hour_hand_len * cos(radians(hour_angle)))
