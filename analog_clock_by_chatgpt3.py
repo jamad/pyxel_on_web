@@ -1,47 +1,54 @@
 import pyxel
-import math
+from math import radians, cos, sin
 import datetime
+
+clock_r = 28
+screen_width = clock_r*2+3
+screen_height = clock_r*2+3
+background_color=0
+foreground_color=7
+color_red=8
+color_green=11
+color_blue=12
 
 class App:
     def __init__(self):
-        self.screen_width = 64
-        self.screen_height = 64
-
-        pyxel.init(self.screen_width, self.screen_height,display_scale=1)
-        self.current_time = datetime.datetime.now()
-        self.radius = min(self.screen_width, self.screen_height) // 4
-
+        pyxel.init(screen_width, screen_height,display_scale=2)
+        pyxel.load('analog_clock_by_chatgpt3.pyxres')
+        self.time_now = datetime.datetime.now()
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.current_time = datetime.datetime.now()
+        self.time_now = datetime.datetime.now()
 
     def draw(self):
-        pyxel.cls(7)
+        pyxel.cls(background_color)
 
         # 時計の中心座標
-        center_x = self.screen_width // 2
-        center_y = self.screen_height // 2
+        cx = cy = clock_r+1
 
         # 時計の外枠を描画
-        pyxel.circb(center_x, center_y, self.radius, 0)
+        pyxel.circb(cx, cy, clock_r, foreground_color)
 
-        # 時針を描画
-        hour_angle = (self.current_time.hour % 12 + self.current_time.minute / 60) * 30 - 90
-        hour_x = center_x + int(self.radius * 0.4 * math.cos(math.radians(hour_angle)))
-        hour_y = center_y + int(self.radius * 0.4 * math.sin(math.radians(hour_angle)))
-        pyxel.line(center_x, center_y, hour_x, hour_y, 0)
 
-        # 分針を描画
-        minute_angle = (self.current_time.minute + self.current_time.second / 60) * 6 - 90
-        minute_x = center_x + int(self.radius * 0.6 * math.cos(math.radians(minute_angle)))
-        minute_y = center_y + int(self.radius * 0.6 * math.sin(math.radians(minute_angle)))
-        pyxel.line(center_x, center_y, minute_x, minute_y, 0)
 
         # 秒針を描画
-        second_angle = (self.current_time.second + self.current_time.microsecond / 1000000) * 6 - 90
-        second_x = center_x + int(self.radius * 0.8 * math.cos(math.radians(second_angle)))
-        second_y = center_y + int(self.radius * 0.8 * math.sin(math.radians(second_angle)))
-        pyxel.line(center_x, center_y, second_x, second_y, 8)
+        second_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
+        second_x = cx + int(clock_r * 0.9 * cos(radians(second_angle)))
+        second_y = cy + int(clock_r * 0.9 * sin(radians(second_angle)))
+        pyxel.line(cx, cy, second_x, second_y, color_blue)
+
+        # 分針を描画
+        minute_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
+        minute_x = cx + int(clock_r * 0.6 * cos(radians(minute_angle)))
+        minute_y = cy + int(clock_r * 0.6 * sin(radians(minute_angle)))
+        pyxel.line(cx, cy, minute_x, minute_y, color_green)
+
+        # 時針を描画
+        hour_angle = (self.time_now.hour % 12 + self.time_now.minute / 60) * 30 - 90
+        hour_hand_len=clock_r * 0.3
+        hour_dx = int(hour_hand_len * cos(radians(hour_angle)))
+        hour_dy = int(hour_hand_len * sin(radians(hour_angle)))
+        pyxel.line(cx, cy, cx+hour_dx, cy+hour_dy,  color_red)
 
 App()
