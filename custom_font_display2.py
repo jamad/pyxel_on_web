@@ -39,7 +39,7 @@ font = Font(fontfile, char_size, alphabet)
 
 class App:
     def __init__(self):
-        pyxel.init(256, 256, title="Custom Font Display", display_scale=2)
+        pyxel.init(256, 128, title="Custom Font Display", display_scale=1)
         pyxel.run(self.update, self.draw)
 
     def update(self):
