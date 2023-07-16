@@ -7,7 +7,7 @@
 
 
 
-|playable content|preview|code|
+|playable content [by launcher](https://kitao.github.io/pyxel/wasm/launcher/)|preview|code|
 |-|-|-|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
 |[loading png image](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_photo)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
