@@ -6,10 +6,11 @@
 
 
 
+
 |playable content|preview|code|
 |-|-|-|
 |plotting mandelbrot|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
-|loading photo|![image](https://github.com/jamad/pyxel_on_web/assets/949913/60aa5b8b-06d1-4298-a323-c06e7c1f3d0e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
+|loading photo|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
 |[palette override](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.art_by_code)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|[code](https://github.com/jamad/pyxel_on_web/blob/main/art_by_code.py)|
 |[playable content(but the launcher seems looking at the first revision)](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.custom_palette_gradation)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61) <br> ![image](https://github.com/jamad/pyxel_on_web/assets/949913/ecad4c73-ab01-4e5e-b78a-774b197050bb)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_palette_gradation.py)|
 |[current time by text](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
