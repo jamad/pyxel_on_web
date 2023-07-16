@@ -35,11 +35,11 @@ ascii_chars = string.punctuation + string.digits + string.ascii_letters
 hiragana = "".join(chr(c) for c in range(ord('ぁ'), ord('ゔ') + 1)) + "ー"
 katakana = "".join(chr(c) for c in range(ord('ァ'), ord('ヶ') + 1)) + "ー"
 alphabet = ascii_chars + hiragana + katakana + "、。「」"
-font = Font(fontfile, char_size, alphabet)
+font = Font(fontfile, char_size, f'font: {fontfile} {"-"*32}{alphabet}')
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="Custom Font Display", display_scale=1)
+        pyxel.init(256, 128+8, title="Custom Font Display", display_scale=1)
         pyxel.run(self.update, self.draw)
 
     def update(self):
