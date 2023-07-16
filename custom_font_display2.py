@@ -1,3 +1,6 @@
+# reference - https://ytyaru.hatenablog.com/entry/2022/04/13/000000
+# fixed the error by chatting with chatgpt3.5
+
 from PIL import Image, ImageFont, ImageDraw
 import pyxel
 import string
@@ -26,32 +29,31 @@ class Font:
         self.img = img
         self.data = np.array(img.getdata()).reshape(256, 256)
 
-
-def draw_font(img, font, col=7):
-    img_bank = pyxel.image(img)
-    for y in range(256):
-        for x in range(256):
-            if font.data[y][x] != 0:
-                pyxel.pset(x, y, col)
-
-
-def update():
-    pass
-
-
-def draw():
-    pyxel.cls(0)
-    draw_font(0, font)
-
-
 fontfile = 'x8y12pxTheStrongGamer.ttf'
-letter_size = (8, 12)
+char_size = (8, 12)
 ascii_chars = string.punctuation + string.digits + string.ascii_letters
 hiragana = "".join(chr(c) for c in range(ord('ぁ'), ord('ゔ') + 1)) + "ー"
 katakana = "".join(chr(c) for c in range(ord('ァ'), ord('ヶ') + 1)) + "ー"
 alphabet = ascii_chars + hiragana + katakana + "、。「」"
+font = Font(fontfile, char_size, alphabet)
 
-font = Font(fontfile, letter_size, alphabet)
+class App:
+    def __init__(self):
+        pyxel.init(256, 256, title="Custom Font Display", display_scale=2)
+        pyxel.run(self.update, self.draw)
 
-pyxel.init(256, 256, title="Custom Font Display")
-pyxel.run(update, draw)
+    def update(self):
+        pass
+
+    def draw(self):
+        pyxel.cls(0)
+
+        img=0
+        color=7# white color
+        img_bank = pyxel.image(img)
+        for y in range(256):
+            for x in range(256):
+                if font.data[y][x] != 0:
+                    pyxel.pset(x, y, color) 
+
+App()
