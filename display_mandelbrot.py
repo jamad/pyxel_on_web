@@ -3,18 +3,19 @@
 import pyxel
 
 # constant variables
-
-s = 1  # cell size
-width = 256
-height = 256
-ws = max(width,height) # windows size
+width = 160
+height = 120
 my_disp_scale=1
 my_fps=60
 
 # for this app
+center_x=width//2
+center_y=height//2
+scaling=max(width,height)//3
 
-def mandelbrot(c,z=0, iteration_level=30):
-    for _ in range(iteration_level):
+
+def mandelbrot(c, z=0, iteration_level=30): # true if dot stay 
+    for i in range(iteration_level):
         z = z * z + c
         if abs(z) > 2:
             return False
@@ -29,10 +30,10 @@ class App:
 
     def update(self):   
         if not self.data:
-            for r in range(ws):
-                for c in range(ws):
-                    a = (c - ws // 2) / (ws // 4)
-                    b = (r - ws // 2) / (ws // 4)
+            for r in range(height):
+                for c in range(width):
+                    a = (c - center_x) /scaling
+                    b = (r - center_y) /scaling
                     self.data[(r,c)]=mandelbrot(complex(a, b))
 
     def draw(self): 
