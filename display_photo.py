@@ -1,5 +1,5 @@
 import pyxel
-pyxel.init(256,256,display_scale=2)
+pyxel.init(256,256,display_scale=1)
 pyxel.cls(0)
 
 #custom palette 
