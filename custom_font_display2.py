@@ -1,16 +1,16 @@
 # reference - https://ytyaru.hatenablog.com/entry/2022/04/13/000000
-# fixed the error by chatting with chatgpt3.5
 
 from PIL import Image, ImageFont, ImageDraw
 import pyxel
 import string
 
+import numpy as np
+
 class Font:
-    def __init__(self, file, size, alphabet):
-        import numpy as np
+    def __init__(self, file, size, str_to_disp):
         self.file = file
         self.size = size
-        self.alphabet = alphabet
+        self.alphabet = str_to_disp
 
         px_w, px_h = size
         font = ImageFont.truetype(file, size=px_h)
@@ -18,7 +18,7 @@ class Font:
         draw = ImageDraw.Draw(img)
         coords = {}
         x, y = 0, 0
-        for c in alphabet:
+        for c in str_to_disp:
             if x + px_w > 256:
                 x = 0
                 y += px_h
@@ -31,11 +31,13 @@ class Font:
 
 fontfile = 'x8y12pxTheStrongGamer.ttf'
 char_size = (8, 12)
+
 ascii_chars = string.punctuation + string.digits + string.ascii_letters
 hiragana = "".join(chr(c) for c in range(ord('ぁ'), ord('ゔ') + 1)) + "ー"
 katakana = "".join(chr(c) for c in range(ord('ァ'), ord('ヶ') + 1)) + "ー"
-alphabet = ascii_chars + hiragana + katakana + "、。「」"
-font = Font(fontfile, char_size, f'font: {fontfile} {"-"*32}{alphabet}')
+string_to_disp = f'font: {fontfile} {"-"*32}{ascii_chars + hiragana + katakana + "、。「」"}'
+
+font = Font(fontfile, char_size, string_to_disp )
 
 class App:
     def __init__(self):
