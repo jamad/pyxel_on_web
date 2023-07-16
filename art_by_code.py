@@ -31,7 +31,10 @@ class App:
         pyxel.init(SCR_W, SCR_H, title="Image by code", display_scale=2)
         self.color = 1
         self.img_id = 0
-        pyxel.image(self.img_id).set(0, 0, my_img)
+
+        print('debug',my_img)
+        
+        pyxel.image(self.img_id).set(0, 0, my_img) # assigning string list to image(0)
 
         pyxel.run(self.update, self.draw)
 
