@@ -7,10 +7,10 @@
 
 
 
-|playable content|preview|code|
+|playable content [by launcher](https://kitao.github.io/pyxel/wasm/launcher/)|preview|code|
 |-|-|-|
-|plotting mandelbrot|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
-|loading photo|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
+|[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
+|[loading png image](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_photo)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
 |[palette override](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.art_by_code)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|[code](https://github.com/jamad/pyxel_on_web/blob/main/art_by_code.py)|
 |[playable content(but the launcher seems looking at the first revision)](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.custom_palette_gradation)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/cc55d99f-a8f9-4bcc-9656-59c9cd2adc61) <br> ![image](https://github.com/jamad/pyxel_on_web/assets/949913/ecad4c73-ab01-4e5e-b78a-774b197050bb)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_palette_gradation.py)|
 |[current time by text](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_05)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ced20af2-dea4-4564-9646-380cf703becc)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_05.py)|
@@ -18,7 +18,7 @@
 |[move rect by arrow keys](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_03)|[move_character_03.py](https://github.com/jamad/pyxel_on_web/blob/main/move_character_03.py)|　
 |[sprite anim + text disp](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.move_character_04)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/e5a8d646-b448-4b76-b123-b79dc1a23216)|[code](https://github.com/jamad/pyxel_on_web/blob/main/move_character_04.py)|
 |[input / output](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
-|custom palette + analog clock|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
+|[custom palette + analog clock](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.analog_clock_by_chatgpt3)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
 
 
 
