@@ -7,8 +7,10 @@
 
 
 
+
 |playable content [by launcher](https://kitao.github.io/pyxel/wasm/launcher/)|preview|code|
 |-|-|-|
+|custom font by ttf|![image](https://github.com/jamad/pyxel_on_web/assets/949913/3d8c8d90-61d6-4f10-b176-fe3fc1106fe8)|code|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
 |[loading png image](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_photo)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
 |[palette override](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.art_by_code)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|[code](https://github.com/jamad/pyxel_on_web/blob/main/art_by_code.py)|
