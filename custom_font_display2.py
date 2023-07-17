@@ -5,13 +5,14 @@ import pyxel
 import string
 import numpy as np
 
-filename='x8y12pxTheStrongGamer.ttf'
 import os
+
+filename='x8y12pxTheStrongGamer.ttf'
 fontfile_path = os.path.join(os.path.dirname(__file__), filename) # relative path based on this .py file
 
-hiragana = "".join(chr(c) for c in range(ord('ぁ'), ord('ゔ') + 1)) + "ー"
-katakana = "".join(chr(c) for c in range(ord('ァ'), ord('ヶ') + 1)) + "ー"
-string_to_disp = f'font: {filename} {"-"*32}{string.punctuation}{string.digits}{string.ascii_letters}{hiragana}{katakana}、。「」'
+hiragana = "".join(map(chr,range(ord('ぁ'), ord('ゔ')+1))) 
+katakana = "".join(map(chr,range(ord('ァ'), ord('ヶ')+1))) 
+string_to_disp = f'font: {filename} {"-"*32}{string.punctuation}{string.digits}{string.ascii_letters}{hiragana}ー{katakana}ー、。「」'
 
 screen_w=256
 screen_h=128+8
@@ -22,7 +23,7 @@ class App:
     def __init__(self):
         pyxel.init(screen_w, screen_h, title="Custom Font Display", display_scale=1)
         
-        # font data generation
+        # font data generation : self.font_data
         font_image = Image.new('1', size=(256, 256)) # fontimage generation : 256x256
         for i,c in enumerate(string_to_disp):
             y,x=divmod(dx*i, 256)
