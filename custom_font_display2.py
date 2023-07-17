@@ -11,7 +11,7 @@ fontfile_path = os.path.join(os.path.dirname(__file__), filename) # relative pat
 
 hiragana = "".join(chr(c) for c in range(ord('ぁ'), ord('ゔ') + 1)) + "ー"
 katakana = "".join(chr(c) for c in range(ord('ァ'), ord('ヶ') + 1)) + "ー"
-string_to_disp = f'font: {filename} {"-"*32}{string.punctuation + string.digits + string.ascii_letters + hiragana + katakana + "、。「」"}'
+string_to_disp = f'font: {filename} {"-"*32}{string.punctuation}{string.digits}{string.ascii_letters}{hiragana}{katakana}、。「」'
 
 screen_w=256
 screen_h=128+8
