@@ -1,8 +1,7 @@
 # pyxel_on_web
+* [.py launcher](https://kitao.github.io/pyxel/wasm/launcher/)
 
-
-
-|playable content [by launcher](https://kitao.github.io/pyxel/wasm/launcher/)|preview|code|
+|playable content |preview|code|
 |-|-|-|
 |custom font by ttf (web link did not work due to PIL)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/37274216-d3ed-41cf-ba2d-582ce4f1df6a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_font_display2.py)|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
@@ -16,9 +15,7 @@
 |[input / output](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.atcoder_on_pyxel)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/82019f63-d196-4e7f-a535-5bbce6c4bf5e)|[code](https://github.com/jamad/pyxel_on_web/blob/main/atcoder_on_pyxel.py)|
 |[custom palette + analog clock](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.analog_clock_by_chatgpt3)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0685f133-6268-4b4c-8278-90bbddf61127)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.hello_pyxel2) |![image](https://github.com/jamad/pyxel_on_web/assets/949913/bd4ef11f-b632-4d7f-8d28-a51aeae5c154)|[code](https://github.com/jamad/pyxel_on_web/blob/main/hello_pyxel2.py)|
-
-
-
+|playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/53e59f83-87a3-4ecd-9904-fd0ce9c5719d)|code|
 
 
 ## reference
