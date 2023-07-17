@@ -3,7 +3,7 @@
 from PIL import Image, ImageFont, ImageDraw
 import pyxel
 import string
-
+import os
 import numpy as np
 
 class Font:
@@ -29,7 +29,10 @@ class Font:
         self.img = img
         self.data = np.array(img.getdata()).reshape(256, 256)
 
-fontfile = 'x8y12pxTheStrongGamer.ttf'
+
+# relative path based on this .py file
+fontfile = os.path.join(os.path.dirname(__file__), 'x8y12pxTheStrongGamer.ttf')
+
 char_size = (8, 12)
 
 ascii_chars = string.punctuation + string.digits + string.ascii_letters
