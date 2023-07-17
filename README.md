@@ -3,7 +3,7 @@
 
 |playable content |preview|code|
 |-|-|-|
-|custom font by ttf (web link did not work due to PIL)<br> ARROW L/R can switch fonts |![image](https://github.com/jamad/pyxel_on_web/assets/949913/4c61d14e-c844-427e-9d7f-974c4d7cd115)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_font_display2.py)|
+|custom font by ttf files (web link did not work due to PIL) <br> Left/Right arrow keys can switch fonts |![image](https://github.com/jamad/pyxel_on_web/assets/949913/4c61d14e-c844-427e-9d7f-974c4d7cd115)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_font_display2.py)|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
 |[loading png image](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_photo)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
 |[palette override](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.art_by_code)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/0924a65d-27c3-4c66-97df-a6895b09c4a3)|[code](https://github.com/jamad/pyxel_on_web/blob/main/art_by_code.py)|
