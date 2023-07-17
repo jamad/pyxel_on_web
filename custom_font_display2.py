@@ -7,8 +7,11 @@ import numpy as np
 
 import os
 
-filename='x8y12pxTheStrongGamer.ttf'
+filename='x8y12pxTheStrongGamer.ttf' # from http://www17.plala.or.jp/xxxxxxx/00ff/ 
+dx, dy = (8, 12) # font dimension
+
 fontfile_path = os.path.join(os.path.dirname(__file__), filename) # relative path based on this .py file
+font_to_use=ImageFont.truetype(fontfile_path, size=dy)
 
 hiragana = "".join(map(chr,range(ord('ぁ'), ord('ゔ')+1))) 
 katakana = "".join(map(chr,range(ord('ァ'), ord('ヶ')+1))) 
@@ -16,8 +19,6 @@ string_to_disp = f'font: {filename} {"-"*32}{string.punctuation}{string.digits}{
 
 screen_w=256
 screen_h=128+8
-dx, dy = (8, 12) # font dimension
-my_font=ImageFont.truetype(fontfile_path, size=dy)
 
 class App:
     def __init__(self):
@@ -27,7 +28,7 @@ class App:
         font_image = Image.new('1', size=(256, 256)) # fontimage generation : 256x256
         for i,c in enumerate(string_to_disp):
             y,x=divmod(dx*i, 256)
-            ImageDraw.Draw(font_image).text((x, y*dy), c, font=my_font, fill=1)
+            ImageDraw.Draw(font_image).text((x, y*dy), c, font=font_to_use, fill=1)
 
         self.font_data = np.array(font_image.getdata()).reshape(256, 256)
 
