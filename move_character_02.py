@@ -1,30 +1,33 @@
-# -*- coding: utf-8 -*-
-
-# assets/cat_16x16.png
-# jump_game.pyxres
-
 import pyxel
 
+
+
 class App:
-    def __init__(self): # 初期化
-        pyxel.init(160, 120)
-        self.x = 0
-        pyxel.run(self.update, self.draw) # アプリケーションの実行
+    def __init__(self):
+        pyxel.init(255, 255, title="Pyxel Custom Color Palette",display_scale=2,fps=240)
+        pyxel.load('custom_palette_gradation.pyxres')
+        pyxel.run(self.update, self.draw)
 
-    def update(self): # フレームの更新処理
-
-            
+    def update(self):
         # マウスカーソルの座標を取得
         self.mx = pyxel.mouse_x
         self.my = pyxel.mouse_y
 
-
-    def draw(self): # 描画処理
+    def draw(self):
         pyxel.cls(0)
-        # 新しく四角形を作成
-        # 左上の座標をマウスカーソルの座標と一致させる
-        pyxel.rect(self.mx, self.my, 5, 5, 6)
 
+        # small grid
+        for x in range(0,256,16):
+            for y in range(0,256,16):
+                pyxel.rect(x+self.mx%16, y+self.my%16, 1, 1, 3)
 
+        # large grid
+        for x in range(0,256,32):
+            for y in range(0,256,32):
+                pyxel.rect(x+self.mx%32 -1, y+self.my%32 -1, 3, 3, 5)
+        
+        # circle
+        pyxel.circb(self.mx, self.my,7,12)
+            
 
 App()
