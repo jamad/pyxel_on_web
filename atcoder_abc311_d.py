@@ -38,14 +38,10 @@ class App():
         pyxel.init(M*8,N*8 + 25, title='atcoder abc311 D', fps=60,display_scale=2) # column M for x , row N for y 
 
         # my code
-        self.steps=0
-        
-        r,c=1,1
-        d='S' # direction S(stop), U, R, D, L
-        self.Q=[(r,c,d)]
+        self.steps=0 # counter
+        self.Q=[(1,1,'S')]# direction S(stop), U, R, D, L
         self.ANS=set()
-        self.DONE=set()
-        self.T=[list(s) for s in S]
+        self.T=[list(s) for s in S] # display data
 
         pyxel.run( update=self.update, draw=self.draw)
 
@@ -55,14 +51,14 @@ class App():
 
         self.steps+=1
 
-        r,c,d=self.Q.pop()
+        self.r_now, self.c_now,_ = r,c,d=self.Q.pop()# update for draw()           
 
         # passable position can be registered
         if S[r][c]=='.':
             self.ANS.add((r,c))
-            self.T[r][c]='o' # data update
+            self.T[r][c]='o' # display data update
 
-        if d=='U'and S[r-1][c]=='.':self.Q.append((r-1,c,d))
+        if   d=='U'and S[r-1][c]=='.':self.Q.append((r-1,c,d))
         elif d=='R'and S[r][c+1]=='.':self.Q.append((r,c+1,d))
         elif d=='D'and S[r+1][c]=='.':self.Q.append((r+1,c,d))
         elif d=='L'and S[r][c-1]=='.':self.Q.append((r,c-1,d))
@@ -71,12 +67,6 @@ class App():
                 for x in 'URDL':self.Q.append( (r,c,x))
                 D[(r,c)]=1
         else:self.Q.append((r,c,'S'))
-
-
-        self.r_now, self.c_now = r,c # update for draw()
-        
-
-                    
 
     def draw(self):
         pyxel.cls(0)
@@ -94,24 +84,3 @@ class App():
         pyxel.text(10, 180, self.Q and  f'IN PROGRESS ... (STEPS) {self.steps} / found : {len(self.ANS)}' or f'FINISHED : (STEPS) {self.steps} /  answer = {len(self.ANS)}',7)
         
 App()
-
-
-from collections import defaultdict
-D=defaultdict(int)
-N,M=map(int,input().split())
-S=[input()for i in range(N)]
-Q=[(1,1,'S')] 
-ANS=set()
-while Q:
-    r,c,d=Q.pop()
-    if S[r][c]=='.':ANS.add((r,c))
-    if d=='U'and S[r-1][c]=='.':Q.append((r-1,c,d))
-    elif d=='R'and S[r][c+1]=='.':Q.append((r,c+1,d))
-    elif d=='D'and S[r+1][c]=='.':Q.append((r+1,c,d))
-    elif d=='L'and S[r][c-1]=='.':Q.append((r,c-1,d))
-    elif d=='S':
-        if  D[(r,c)]<1:
-            for x in 'URDL':Q.append( (r,c,x))
-            D[(r,c)]=1
-    else:Q.append((r,c,'S'))
-print(len(ANS))
