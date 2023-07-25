@@ -3,7 +3,7 @@
 
 |playable content |preview|code|
 |-|-|-|
-|[visualization atcoder abc311_d example](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.visualization_abc311_d) |![image](https://github.com/jamad/pyxel_on_web/assets/949913/c0dc21dd-1832-43b1-af15-8b5132af1d81)|[code](https://github.com/jamad/pyxel_on_web/blob/main/visualization_abc311_d.py)|
+|[visualization atcoder abc311_d example](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.visualization_abc311_d) |![pyxel-20230726-011018](https://github.com/jamad/pyxel_on_web/assets/949913/fd336120-b972-4171-90ab-a69f9b408d66)|[code](https://github.com/jamad/pyxel_on_web/blob/main/visualization_abc311_d.py)|
 |custom fonts by ttf files (web launcher did not work due to loading ttf files) <br> Left/Right arrow keys can switch fonts |![image](https://github.com/jamad/pyxel_on_web/assets/949913/4c61d14e-c844-427e-9d7f-974c4d7cd115)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_font_display2.py)|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
 |[loading png image](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_photo)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/ba22616a-b272-4fd9-bc20-2539ee37834a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_photo.py)|
