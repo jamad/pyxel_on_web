@@ -83,7 +83,7 @@ class App():
 
         for r in range(len(S)):
             for c in range(len(S[r])):
-                col=6
+                col=5
                 if self.T[r][c]=='o':col=3
                 if self.T[r][c]=='#':col=2
                 if self.r_now==r and self.c_now==c:col=7
@@ -91,7 +91,7 @@ class App():
                 #pyxel.text(r*8,c*8, self.T[r][c],col) # wrong layout
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
 
-        pyxel.text(50, 180, self.Q and  f'IN PROGRESS ... {self.steps} / found : {len(self.ANS)}' or f'FINISHED : {self.steps} /  answer = {len(self.ANS)}',7)
+        pyxel.text(10, 180, self.Q and  f'IN PROGRESS ... (STEPS) {self.steps} / found : {len(self.ANS)}' or f'FINISHED : (STEPS) {self.steps} /  answer = {len(self.ANS)}',7)
         
 App()
 
