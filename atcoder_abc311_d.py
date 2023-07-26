@@ -35,7 +35,7 @@ D=defaultdict(int)
 
 class App():
     def __init__(self) -> None:
-        pyxel.init(M*8,N*8 + 25, title='atcoder abc311 D', fps=60,display_scale=2) # column M for x , row N for y 
+        pyxel.init(M*5,N*6 + 20, title='atcoder abc311 D', fps=60,display_scale=3) # column M for x , row N for y 
 
         # my code
         self.steps=0 # counter
@@ -46,7 +46,9 @@ class App():
         pyxel.run( update=self.update, draw=self.draw)
 
     def update(self):
-
+        if pyxel.btnp(pyxel.KEY_Q):
+            print('quitting...')
+            pyxel.quit()
         if not self.Q:return # alredy logic is done, no need to calc
 
         self.steps+=1
@@ -79,8 +81,10 @@ class App():
                 if self.r_now==r and self.c_now==c:col=7
                 
                 #pyxel.text(r*8,c*8, self.T[r][c],col) # wrong layout
-                pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
+                pyxel.text(c*5,r*6, self.T[r][c],col) # c for x , r for y
 
-        pyxel.text(10, 180, self.Q and  f'IN PROGRESS ... (STEPS) {self.steps} / found : {len(self.ANS)}' or f'FINISHED : (STEPS) {self.steps} /  answer = {len(self.ANS)}',7)
+        pyxel.text(10, 128, self.Q and  f'IN PROGRESS ... ' or f'FINISHED : ',7)
+        pyxel.text(10, 138,  f'(STEPS) {self.steps} / found : {len(self.ANS)}',7)
         
 App()
+
