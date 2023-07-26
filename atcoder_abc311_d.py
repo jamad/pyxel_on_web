@@ -32,7 +32,6 @@ S='''\
 from collections import defaultdict
 D=defaultdict(int)
 
-
 class App():
     def __init__(self) -> None:
         pyxel.init(M*5,N*6 + 20, title='atcoder abc311 D', fps=60,display_scale=3) # column M for x , row N for y 
@@ -47,28 +46,29 @@ class App():
 
     def update(self):
         if pyxel.btnp(pyxel.KEY_Q):
-            print('quitting...')
             pyxel.quit()
-        if not self.Q:return # alredy logic is done, no need to calc
+
+        if not self.Q:return # logic is done already, no need to calc
 
         self.steps+=1
 
         self.r_now, self.c_now,_ = r,c,d=self.Q.pop()# update for draw()           
 
-        # passable position can be registered
         if S[r][c]=='.':
-            self.ANS.add((r,c))
-            self.T[r][c]='o' # display data update
+            self.ANS.add((r,c)) # passable position can be registered
+            self.T[r][c]='o'    # display data update
+
+        if d=='S':
+            if  D[(r,c)]<1:
+                D[(r,c)]=1
+                for x in 'URDL':self.Q.append( (r,c,x))
+            return
 
         if   d=='U'and S[r-1][c]=='.':self.Q.append((r-1,c,d))
         elif d=='R'and S[r][c+1]=='.':self.Q.append((r,c+1,d))
         elif d=='D'and S[r+1][c]=='.':self.Q.append((r+1,c,d))
         elif d=='L'and S[r][c-1]=='.':self.Q.append((r,c-1,d))
-        elif d=='S':
-            if  D[(r,c)]<1:
-                for x in 'URDL':self.Q.append( (r,c,x))
-                D[(r,c)]=1
-        else:self.Q.append((r,c,'S'))
+        else:self.Q.append((r,c,'S')) 
 
     def draw(self):
         pyxel.cls(0)
