@@ -12,46 +12,51 @@ fg_color=7
 color_red=1
 color_green=2
 color_blue=3
-pyxel.colors[1]=0xff0000
+pyxel.colors[1]=0xff4040
 pyxel.colors[2]=0x70c6a9
-pyxel.colors[3]=0x0000ff
-
+pyxel.colors[3]=0x4040ff
 
 class App:
     def __init__(self):
-        pyxel.init(screen_w, screen_h,display_scale=2)
-
+        pyxel.init(screen_w, screen_h,display_scale=3)
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.time_now = datetime.datetime.now()
+        self.time_now=t = datetime.datetime.now()
+
+        # center pos
+        self.c = c = clock_r+1
+
+        def get_x(multi, a):
+            return c + int( clock_r * 0.3 * multi * cos (radians(a- 90)))
+        def get_y(multi, a):
+            return c + int( clock_r * 0.3 * multi * sin (radians(a- 90)))
+
+        # second hand 
+        sec_angle = (t.second + t.microsecond / 1000000) * 6 
+        self.sec_x = get_x(3,sec_angle)
+        self.sec_y = get_y(3,sec_angle)
+
+        # minute hand 
+        min_angle = (t.minute + t.second / 60) * 6 
+        self.min_x = get_x(2,min_angle) 
+        self.min_y = get_y(2,min_angle)
+        
+        # hour hand 
+        hour_angle = (t.hour % 12 + t.minute / 60) * 30 
+        self.hour_x = get_x(1,hour_angle)
+        self.hour_y = get_y(1,hour_angle) 
 
     def draw(self):
         pyxel.cls(bg_color)
 
-        # center coord
-        cx = cy = clock_r+1
+        c=self.c
+        pyxel.circb(c, c, clock_r, fg_color)# clock outline
+        pyxel.line(c, c, self.sec_x, self.sec_y, color_blue)
+        pyxel.line(c, c, self.min_x, self.min_y, color_green)
+        pyxel.line(c, c, self.hour_x, self.hour_y,  color_red)
 
-        # clock outline
-        pyxel.circb(cx, cy, clock_r, fg_color)
-
-        # second hand to disp
-        sec_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
-        sec_x = cx + int(clock_r * 0.9 * cos(radians(sec_angle)))
-        sec_y = cy + int(clock_r * 0.9 * sin(radians(sec_angle)))
-        pyxel.line(cx, cy, sec_x, sec_y, color_blue)
-
-        # minute hand to disp
-        min_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
-        min_x = cx + int(clock_r * 0.6 * cos(radians(min_angle)))
-        min_y = cy + int(clock_r * 0.6 * sin(radians(min_angle)))
-        pyxel.line(cx, cy, min_x, min_y, color_green)
-
-        # hour hand to disp
-        hour_angle = (self.time_now.hour % 12 + self.time_now.minute / 60) * 30 - 90
-        hour_hand_len=clock_r * 0.3
-        hour_dx = int(hour_hand_len * cos(radians(hour_angle)))
-        hour_dy = int(hour_hand_len * sin(radians(hour_angle)))
-        pyxel.line(cx, cy, cx+hour_dx, cy+hour_dy,  color_red)
+        pyxel.text(20,6,f'{self.time_now.hour:02}:{self.time_now.minute:02}',7 )
+        pyxel.text(26,48,f'{self.time_now.second:02}',7 )
 
 App()
