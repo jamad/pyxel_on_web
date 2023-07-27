@@ -1,11 +1,14 @@
 import pyxel
 
-
-
 class App:
     def __init__(self):
         pyxel.init(255, 81, title="Pyxel Custom Color Palette",display_scale=1)
-        pyxel.load('custom_palette_gradation.pyxres')
+   
+        # no need to use .pyxres and .pyxpal
+        #pyxel.load('custom_palette_gradation.pyxres')       
+        for i,x in enumerate(range(0,0xffffff,528392)):
+            pyxel.colors[i]=x 
+
         pyxel.run(self.update, self.draw)
 
     def update(self):
