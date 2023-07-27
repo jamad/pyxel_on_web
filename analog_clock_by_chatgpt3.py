@@ -3,55 +3,49 @@ from math import radians, cos, sin
 import datetime
 
 clock_r = 28
-screen_width = clock_r*2+3
-screen_height = clock_r*2+3
-background_color=0
-foreground_color=7
-color_red=8
-color_green=11
-color_blue=12
+screen_w = clock_r*2+3
+screen_h = clock_r*2+3
+bg_color=0
+fg_color=7
+
+# color palette change by code
+color_red=1
+color_green=2
+color_blue=3
+pyxel.colors[1]=0xff0000
+pyxel.colors[2]=0x70c6a9
+pyxel.colors[3]=0x0000ff
+
 
 class App:
     def __init__(self):
-        pyxel.init(screen_width, screen_height,display_scale=2)
-        pyxel.load('analog_clock_by_chatgpt3.pyxres')
-        
-        print(len(pyxel.colors))
-        
-        for i,x in enumerate( pyxel.colors):
-            print(i,x,hex(x))
+        pyxel.init(screen_w, screen_h,display_scale=2)
 
-        print(pyxel.colors)
-        
-
-        self.time_now = datetime.datetime.now()
         pyxel.run(self.update, self.draw)
 
     def update(self):
         self.time_now = datetime.datetime.now()
 
     def draw(self):
-        pyxel.cls(background_color)
+        pyxel.cls(bg_color)
 
         # center coord
         cx = cy = clock_r+1
 
         # clock outline
-        pyxel.circb(cx, cy, clock_r, foreground_color)
-
-
+        pyxel.circb(cx, cy, clock_r, fg_color)
 
         # second hand to disp
-        second_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
-        second_x = cx + int(clock_r * 0.9 * cos(radians(second_angle)))
-        second_y = cy + int(clock_r * 0.9 * sin(radians(second_angle)))
-        pyxel.line(cx, cy, second_x, second_y, color_blue)
+        sec_angle = (self.time_now.second + self.time_now.microsecond / 1000000) * 6 - 90
+        sec_x = cx + int(clock_r * 0.9 * cos(radians(sec_angle)))
+        sec_y = cy + int(clock_r * 0.9 * sin(radians(sec_angle)))
+        pyxel.line(cx, cy, sec_x, sec_y, color_blue)
 
         # minute hand to disp
-        minute_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
-        minute_x = cx + int(clock_r * 0.6 * cos(radians(minute_angle)))
-        minute_y = cy + int(clock_r * 0.6 * sin(radians(minute_angle)))
-        pyxel.line(cx, cy, minute_x, minute_y, color_green)
+        min_angle = (self.time_now.minute + self.time_now.second / 60) * 6 - 90
+        min_x = cx + int(clock_r * 0.6 * cos(radians(min_angle)))
+        min_y = cy + int(clock_r * 0.6 * sin(radians(min_angle)))
+        pyxel.line(cx, cy, min_x, min_y, color_green)
 
         # hour hand to disp
         hour_angle = (self.time_now.hour % 12 + self.time_now.minute / 60) * 30 - 90
