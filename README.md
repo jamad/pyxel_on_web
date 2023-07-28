@@ -1,6 +1,7 @@
 # pyxel_on_web
 * [.py launcher](https://kitao.github.io/pyxel/wasm/launcher/)
-
+* alt+3 to record gif anim on desktop
+* alt+0 to show fps etc
 
 
 
