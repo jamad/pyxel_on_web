@@ -22,7 +22,11 @@
 |[custom palette + analog clock](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.analog_clock_by_chatgpt3)|![pyxel-20230728-002501](https://github.com/jamad/pyxel_on_web/assets/949913/75d3ffdc-2369-4cdd-bf65-1d31f36622f8)|[code](https://github.com/jamad/pyxel_on_web/blob/main/analog_clock_by_chatgpt3.py)|
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.hello_pyxel2) |![image](https://github.com/jamad/pyxel_on_web/assets/949913/bd4ef11f-b632-4d7f-8d28-a51aeae5c154)|[code](https://github.com/jamad/pyxel_on_web/blob/main/hello_pyxel2.py)|
 |playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/53e59f83-87a3-4ecd-9904-fd0ce9c5719d)|code|
-|playable content |preview|code|
+|[archimedean spiral](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.archimedean_spiral) |![pyxel-20230728-132845](https://github.com/jamad/pyxel_on_web/assets/949913/c3f6b7be-9a88-40c6-94b1-768bdbe4a5a1)|[code](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.archimedean_spiral)|
+
+
+
+
 
 
 ## reference
