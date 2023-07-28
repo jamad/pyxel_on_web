@@ -28,7 +28,7 @@ class HeartShapeApp:
             if shape_orig_size <= self.heart_size :
                 self.heart_size = shape_orig_size
                 self.is_animating= False
-        elif ( pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) or pyxel.btnp(pyxel.KEY_SPACE) ):
+        elif ( pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) or pyxel.btnp(pyxel.KEY_SPACE) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_A) ):
             self.is_animating = True
             self.heart_size=shape_orig_size * 0.5
 
