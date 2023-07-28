@@ -3,9 +3,9 @@
 
 
 
-
 |playable content |preview|code|
 |-|-|-|
+|[gamepad_input_checker](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.gamepad_input_checker&gamepad=enabled) |preview|[code](https://github.com/jamad/pyxel_on_web/blob/main/gamepad_input_checker.py)|
 |[visualization atcoder abc311_d example](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.visualization_abc311_d) |![pyxel-20230726-094116](https://github.com/jamad/pyxel_on_web/assets/949913/5dbdff6a-78cf-4c5d-8e15-65ca34eb6d1a)|[code](https://github.com/jamad/pyxel_on_web/blob/main/visualization_abc311_d.py)|
 |custom fonts by ttf files (web launcher did not work due to loading ttf files) <br> Left/Right arrow keys can switch fonts |![image](https://github.com/jamad/pyxel_on_web/assets/949913/4c61d14e-c844-427e-9d7f-974c4d7cd115)|[code](https://github.com/jamad/pyxel_on_web/blob/main/custom_font_display2.py)|
 |[plotting mandelbrot](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.display_mandelbrot)|![image](https://github.com/jamad/pyxel_on_web/assets/949913/96ac1bc3-ddc1-4571-9ea9-f7a8e6ea2327)|[code](https://github.com/jamad/pyxel_on_web/blob/main/display_mandelbrot.py)|
