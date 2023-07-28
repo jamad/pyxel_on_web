@@ -23,7 +23,7 @@
 |[playable content](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.hello_pyxel2) |![image](https://github.com/jamad/pyxel_on_web/assets/949913/bd4ef11f-b632-4d7f-8d28-a51aeae5c154)|[code](https://github.com/jamad/pyxel_on_web/blob/main/hello_pyxel2.py)|
 |playable content|![image](https://github.com/jamad/pyxel_on_web/assets/949913/53e59f83-87a3-4ecd-9904-fd0ce9c5719d)|code|
 |[archimedean spiral](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.archimedean_spiral) |![pyxel-20230728-132845](https://github.com/jamad/pyxel_on_web/assets/949913/c3f6b7be-9a88-40c6-94b1-768bdbe4a5a1)|[code](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.archimedean_spiral)|
-|playable content |![pyxel-20230728-183154](https://github.com/jamad/pyxel_on_web/assets/949913/210112d8-f93e-4a84-b728-94526f865c0f)|[code](https://github.com/jamad/pyxel_on_web/blob/main/heart_beat.py)|
+|[interactive heart beat](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.heart_beat&gamepad=enabled) |![pyxel-20230728-183154](https://github.com/jamad/pyxel_on_web/assets/949913/210112d8-f93e-4a84-b728-94526f865c0f)|[code](https://github.com/jamad/pyxel_on_web/blob/main/heart_beat.py)|
 
 
 
