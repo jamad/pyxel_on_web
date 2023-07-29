@@ -3,15 +3,12 @@ from math import radians, cos, sin
 import datetime
 
 clock_r = 28
+c=clock_r+1        # center pos
 screen_w = clock_r*2+3
 screen_h = clock_r*2+3
-bg_color=0
-fg_color=7
 
-# color palette change by code
-color_red=1
-color_green=2
-color_blue=3
+# color modification by code
+red,green,blue,white=1,2,3,7
 pyxel.colors[1]=0xff4040
 pyxel.colors[2]=0x70c6a9
 pyxel.colors[3]=0x4040ff
@@ -22,15 +19,10 @@ class App:
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.time_now=t = datetime.datetime.now()
+        self.time_now = t = datetime.datetime.now()
 
-        # center pos
-        self.c = c = clock_r+1
-
-        def get_x(multi, a):
-            return c + int( clock_r * 0.3 * multi * cos (radians(a- 90)))
-        def get_y(multi, a):
-            return c + int( clock_r * 0.3 * multi * sin (radians(a- 90)))
+        get_x=lambda multi, a:c + int( clock_r * 0.3 * multi * cos (radians(a- 90)))
+        get_y=lambda multi, a:c + int( clock_r * 0.3 * multi * sin (radians(a- 90)))
 
         # second hand 
         sec_angle = (t.second + t.microsecond / 1000000) * 6 
@@ -48,13 +40,13 @@ class App:
         self.hour_y = get_y(1,hour_angle) 
 
     def draw(self):
-        pyxel.cls(bg_color)
+        pyxel.cls(0)
 
-        c=self.c
-        pyxel.circb(c, c, clock_r, fg_color)# clock outline
-        pyxel.line(c, c, self.sec_x, self.sec_y, color_blue)
-        pyxel.line(c, c, self.min_x, self.min_y, color_green)
-        pyxel.line(c, c, self.hour_x, self.hour_y,  color_red)
+        pyxel.circb(c, c, clock_r, white)# clock outline
+
+        pyxel.line(c, c, self.sec_x, self.sec_y, blue)
+        pyxel.line(c, c, self.min_x, self.min_y, green)
+        pyxel.line(c, c, self.hour_x, self.hour_y,  red)
 
         pyxel.text(20,6,f'{self.time_now.hour:02}:{self.time_now.minute:02}',7 )
         pyxel.text(26,48,f'{self.time_now.second:02}',7 )
