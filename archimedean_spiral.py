@@ -25,9 +25,9 @@ class App:
         pyxel.cls(0)
 
         for i,coord in enumerate(coords[::-1]):
-            pyxel.rect(coord[0], coord[1], 1, 1, i%16)
+            pyxel.pset(coord[0], coord[1], i%16)
 
-        pyxel.text(100,120, f'{pyxel.frame_count}', 8)
+        pyxel.text(10,120, f'dot count :{pyxel.frame_count}', 8)
 
 
 App()
