@@ -1,7 +1,5 @@
 import pyxel
 
-####  下記のデータをアルファベットで表現すれば、26個以内でキーの状態に応じて、対応する部分のドットの色付けをできそうな気がする
-
 my_img='''\
 0000000000000000
 00c0000000000d00
@@ -49,15 +47,21 @@ class App:
     def draw(self):
         pyxel.cls(0)
 
-        
-        my_img_trigger=[['0']*16 for _ in range(16)]
+        my_img_trigger=[['0']*16 for _ in range(16)] # data reset
 
         gamepadnum='GAMEPAD1_'
         direction='LEFTX LEFTY RIGHTX RIGHTY TRIGGERLEFT TRIGGERRIGHT'.split() # a a b b c d 
 
         for i,x in enumerate(direction):
             data_to_check=gamepadnum + 'AXIS_' + x
-            pyxel.text(10,10+10*i, f'{data_to_check} : {pyxel.btnv(eval("pyxel."+ data_to_check))}', 7)
+            value=pyxel.btnv(eval("pyxel."+ data_to_check))
+            pyxel.text(10,10+10*i, f'{data_to_check} : {value}', 7)
+
+            # if 0<value: # add white pixel for highlight
+            #     for r in range(16):
+            #         for c in range(16):
+            #             if KEYPOS[i+2][r][c]=='1': # if matching key position
+            #                 if my_img_trigger[r][c]=='0':my_img_trigger[r][c]='7' # turn white if not
 
         button='A B X Y BACK GUIDE START LEFTSTICK RIGHTSTICK LEFTSHOULDER RIGHTSHOULDER DPAD_UP DPAD_DOWN DPAD_LEFT DPAD_RIGHT'.split() # e f g h i z j k l m n o p q r
         for i,x in enumerate(button):
@@ -66,12 +70,12 @@ class App:
             value=pyxel.btn(eval("pyxel."+ data_to_check))
             pyxel.text(10,80+10*i, f'{data_to_check} : {value}', value and 7 or 2)
 
-            if value:
+            if value: # add white pixel for highlight
                 for r in range(16):
                     for c in range(16):
-                        if KEYPOS[i+4][r][c]=='1':
-                            if my_img_trigger[r][c]=='0':
-                                my_img_trigger[r][c]='7'
+                        if KEYPOS[i+4][r][c]=='1': # if matching key position
+                            if my_img_trigger[r][c]=='0':my_img_trigger[r][c]='7' # turn white if not
+
 
         pyxel.blt(200, 10, image_base, 0, 0, 16, 16, 0) # gamepad base image
 
