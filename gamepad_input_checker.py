@@ -107,34 +107,34 @@ class App:
         #pyxel.line(100+self.stick_L_X,100+self.stick_L_Y,135+self.stick_R_X,100+self.stick_R_Y,8)
         offsetX=20
         offsetY=80
-        gapH=24
+        gapH=24+2
         gap=16
 
         color= myDict['GAMEPAD1_BUTTON_LEFTSTICK'] and 7 or 5
         pyxel.circb(offsetX,offsetY,8,color)
 
         color= myDict['GAMEPAD1_BUTTON_RIGHTSTICK'] and 7 or 5
-        pyxel.circb(offsetX+gapH+2,offsetY,8,color)
+        pyxel.circb(offsetX+gapH,offsetY,8,color)
 
         pyxel.line(offsetX,offsetY,offsetX+self.stick_LX,offsetY+self.stick_LY,7)
         pyxel.pset(offsetX+self.stick_LX,offsetY+self.stick_LY,5) # green tip
 
-        pyxel.line(offsetX+gapH+2,offsetY,offsetX+gapH+2+self.stick_RX,offsetY+self.stick_RY,7)
-        pyxel.pset(offsetX+gapH+2+self.stick_RX,offsetY+self.stick_RY,5)# green tip
+        pyxel.line(offsetX+gapH,offsetY,offsetX+gapH+self.stick_RX,offsetY+self.stick_RY,7)
+        pyxel.pset(offsetX+gapH+self.stick_RX,offsetY+self.stick_RY,5)# green tip
 
         # triggers
         pyxel.line(offsetX,offsetY-gap,offsetX,offsetY-gap-self.stick_LT,7)
         pyxel.pset(offsetX,offsetY-gap-self.stick_LT,5) # green tip
 
-        pyxel.line(offsetX+gapH+2,offsetY-gap,offsetX+gapH+2,offsetY-gap-self.stick_RT,7)
-        pyxel.pset(offsetX+gapH+2,offsetY-gap-self.stick_RT,5) # green tip
+        pyxel.line(offsetX+gapH,offsetY-gap,offsetX+gapH,offsetY-gap-self.stick_RT,7)
+        pyxel.pset(offsetX+gapH,offsetY-gap-self.stick_RT,5) # green tip
 
         # shoulder button
         color= myDict['GAMEPAD1_BUTTON_LEFTSHOULDER'] and 7 or 5
         pyxel.line(offsetX-6,offsetY-12,offsetX+6,offsetY-12,color)
 
         color= myDict['GAMEPAD1_BUTTON_RIGHTSHOULDER'] and 7 or 5
-        pyxel.line(offsetX-6 +gapH+2 ,offsetY-12,offsetX+6 +gapH+2,offsetY-12,color)
+        pyxel.line(offsetX-6 +gapH ,offsetY-12,offsetX+6 +gapH,offsetY-12,color)
 
         # start button
         color= myDict['GAMEPAD1_BUTTON_BACK'] and 7 or 5
@@ -145,32 +145,40 @@ class App:
         pyxel.rect(offsetX + gapH -9  , offsetY +10, 2,2, color)
 
         # dpad
-        buttonsize=3
-        offsetX_dpad=offsetX-buttonsize//2
+        dpad_size=3
+        offsetX_dpad=offsetX-dpad_size//2
         offsetY_dpad=offsetY +18
-        pyxel.rect(offsetX_dpad  ,  offsetY_dpad, buttonsize, buttonsize, 5)
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad, dpad_size, dpad_size, 5)
         
         color= myDict['GAMEPAD1_BUTTON_DPAD_UP'] and 7 or 5
-        pyxel.rect(offsetX_dpad  ,  offsetY_dpad - buttonsize, buttonsize, buttonsize, color)
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad - dpad_size, dpad_size, dpad_size, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_DOWN'] and 7 or 5
-        pyxel.rect(offsetX_dpad  ,  offsetY_dpad +buttonsize, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad +dpad_size, dpad_size,dpad_size, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_LEFT'] and 7 or 5
-        pyxel.rect(offsetX_dpad - buttonsize  ,  offsetY_dpad, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad - dpad_size  ,  offsetY_dpad, dpad_size,dpad_size, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_RIGHT'] and 7 or 5
-        pyxel.rect(offsetX_dpad + buttonsize  ,  offsetY_dpad, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad + dpad_size  ,  offsetY_dpad, dpad_size,dpad_size, color)
 
         # buttons
-
+        buttonsize=2
+        offsetX_button=offsetX+gapH
+        offsetY_button=offsetY_dpad
         color= myDict['GAMEPAD1_BUTTON_A'] and 7 or 5
-        #pyxel.circ(offsetX)
+        pyxel.circ(offsetX_button, offsetY_button + buttonsize+2, buttonsize, color)
+
+        color= myDict['GAMEPAD1_BUTTON_Y'] and 7 or 5
+        pyxel.circ(offsetX_button, offsetY_button - buttonsize-2, buttonsize, color)
+        
+        color= myDict['GAMEPAD1_BUTTON_B'] and 7 or 5
+        pyxel.circ(offsetX_button+ buttonsize+2, offsetY_button, buttonsize, color)
+
+        color= myDict['GAMEPAD1_BUTTON_X'] and 7 or 5
+        pyxel.circ(offsetX_button-buttonsize-2, offsetY_button, buttonsize, color)
 
         pyxel.text(200,40, f'wip',  1)
 
 
 App()
-
-{'': False, 'GAMEPAD1_BUTTON_B': False, 'GAMEPAD1_BUTTON_X': False, 'GAMEPAD1_BUTTON_Y': False, 'GAMEPAD1_BUTTON_GUIDE': False, 
- '': False, '': False, '': False}
