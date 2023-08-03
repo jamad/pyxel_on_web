@@ -40,10 +40,13 @@ class App:
         pyxel.init(256, 512, title='gamepad input', display_scale=2)
 
         pyxel.image(image_base).set(0, 0, my_img) # assigning string list to image(0)
-        self.stick_L_X=0
-        self.stick_L_Y=0
-        self.stick_R_X=0
-        self.stick_R_Y=0
+        self.stick_LX=0
+        self.stick_LY=0
+        self.stick_RX=0
+        self.stick_RY=0
+        self.stick_LT=0
+        self.stick_RT=0
+        
         
 
         pyxel.run(self.update, self.draw)
@@ -66,10 +69,10 @@ class App:
             #myDict[data_to_check]= f'{value:+016b}' if value >= 0 else f'{(1 << 16) + value:016b}'
             myDict[data_to_check]= f'{value}'
 
-            if x=='LEFTX':self.stick_L_X=value//8192
-            if x=='LEFTY':self.stick_L_Y=value//8192
-            if x=='RIGHTX':self.stick_R_X=value//8192
-            if x=='RIGHTY':self.stick_R_Y=value//8192
+            if x=='LEFTX':self.stick_LX=value//4096
+            if x=='LEFTY':self.stick_LY=value//4096
+            if x=='RIGHTX':self.stick_RX=value//4096
+            if x=='RIGHTY':self.stick_RY=value//4096
             
         button='A B X Y BACK GUIDE START LEFTSTICK RIGHTSTICK LEFTSHOULDER RIGHTSHOULDER DPAD_UP DPAD_DOWN DPAD_LEFT DPAD_RIGHT'.split() # e f g h i z j k l m n o p q r
         for i,x in enumerate(button):
@@ -98,11 +101,15 @@ class App:
         pyxel.blt(5, 5, image_triggered, 0 ,0, 16, 16, 0)    # gamepad trigger image
 
         #pyxel.line(100+self.stick_L_X,100+self.stick_L_Y,135+self.stick_R_X,100+self.stick_R_Y,8)
-        pyxel.line(100,100,100+self.stick_L_X,100+self.stick_L_Y,7)
-        pyxel.line(135,100,135+self.stick_R_X,100+self.stick_R_Y,7)
-        
-        pyxel.pset(100+self.stick_L_X,100+self.stick_L_Y,5)
-        pyxel.pset(135+self.stick_R_X,100+self.stick_R_Y,5)
+        offsetX=50
+        offsetY=50
+        gap=16
+        pyxel.line(offsetX,offsetY,offsetX+self.stick_LX,offsetY+self.stick_LY,7)
+        pyxel.line(offsetX+gap+2,offsetY,offsetX+gap+2+self.stick_RX,offsetY+self.stick_RY,7)
+        pyxel.pset(offsetX+self.stick_LX,offsetY+self.stick_LY,5)
+        pyxel.pset(offsetX+gap+2+self.stick_RX,offsetY+self.stick_RY,5)
+        pyxel.circb(offsetX,offsetY,8,5)
+        pyxel.circb(offsetX+gap+2,offsetY,8,5)
 
         pyxel.text(200,40, f'wip',  1)
 
