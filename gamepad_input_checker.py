@@ -147,25 +147,30 @@ class App:
         # dpad
         buttonsize=3
         offsetX_dpad=offsetX-buttonsize//2
-        offsetY_dpad=18
-        pyxel.rect(offsetX_dpad  , offsetY + offsetY_dpad, buttonsize, buttonsize, 5)
+        offsetY_dpad=offsetY +18
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad, buttonsize, buttonsize, 5)
         
         color= myDict['GAMEPAD1_BUTTON_DPAD_UP'] and 7 or 5
-        pyxel.rect(offsetX_dpad  , offsetY + offsetY_dpad - buttonsize, buttonsize, buttonsize, color)
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad - buttonsize, buttonsize, buttonsize, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_DOWN'] and 7 or 5
-        pyxel.rect(offsetX_dpad  , offsetY + offsetY_dpad +buttonsize, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad  ,  offsetY_dpad +buttonsize, buttonsize,buttonsize, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_LEFT'] and 7 or 5
-        pyxel.rect(offsetX_dpad - buttonsize  , offsetY + offsetY_dpad, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad - buttonsize  ,  offsetY_dpad, buttonsize,buttonsize, color)
 
         color= myDict['GAMEPAD1_BUTTON_DPAD_RIGHT'] and 7 or 5
-        pyxel.rect(offsetX_dpad + buttonsize  , offsetY + offsetY_dpad, buttonsize,buttonsize, color)
+        pyxel.rect(offsetX_dpad + buttonsize  ,  offsetY_dpad, buttonsize,buttonsize, color)
+
+        # buttons
+
+        color= myDict['GAMEPAD1_BUTTON_A'] and 7 or 5
+        #pyxel.circ(offsetX)
 
         pyxel.text(200,40, f'wip',  1)
 
 
 App()
 
-{'GAMEPAD1_BUTTON_A': False, 'GAMEPAD1_BUTTON_B': False, 'GAMEPAD1_BUTTON_X': False, 'GAMEPAD1_BUTTON_Y': False, 'GAMEPAD1_BUTTON_GUIDE': False, 
+{'': False, 'GAMEPAD1_BUTTON_B': False, 'GAMEPAD1_BUTTON_X': False, 'GAMEPAD1_BUTTON_Y': False, 'GAMEPAD1_BUTTON_GUIDE': False, 
  '': False, '': False, '': False}
