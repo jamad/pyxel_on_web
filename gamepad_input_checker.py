@@ -131,6 +131,13 @@ class App:
         pyxel.line(offsetX+gapH+2,offsetY-gap,offsetX+gapH+2,offsetY-gap-self.stick_RT,7)
         pyxel.pset(offsetX+gapH+2,offsetY-gap-self.stick_RT,5) # green tip
 
+        # shoulder button
+        color= myDict['GAMEPAD1_BUTTON_LEFTSHOULDER'] and 7 or 5
+        pyxel.line(offsetX-6,offsetY-12,offsetX+6,offsetY-12,color)
+
+        color= myDict['GAMEPAD1_BUTTON_RIGHTSHOULDER'] and 7 or 5
+        pyxel.line(offsetX-6 +gapH+2 ,offsetY-12,offsetX+6 +gapH+2,offsetY-12,color)
+
         # start button
         color= myDict['GAMEPAD1_BUTTON_BACK'] and 7 or 5
         pyxel.rect(offsetX + 9 , offsetY +10, 2,2, color)
@@ -144,4 +151,4 @@ class App:
 
 App()
 
-{'GAMEPAD1_BUTTON_A': False, 'GAMEPAD1_BUTTON_B': False, 'GAMEPAD1_BUTTON_X': False, 'GAMEPAD1_BUTTON_Y': False, 'GAMEPAD1_BUTTON_GUIDE': False, 'GAMEPAD1_BUTTON_START': False, 'GAMEPAD1_BUTTON_LEFTSTICK': False, 'GAMEPAD1_BUTTON_LEFTSHOULDER': False, 'GAMEPAD1_BUTTON_RIGHTSHOULDER': False, 'GAMEPAD1_BUTTON_DPAD_UP': False, 'GAMEPAD1_BUTTON_DPAD_DOWN': False, 'GAMEPAD1_BUTTON_DPAD_LEFT': False, 'GAMEPAD1_BUTTON_DPAD_RIGHT': False}
+{'GAMEPAD1_BUTTON_A': False, 'GAMEPAD1_BUTTON_B': False, 'GAMEPAD1_BUTTON_X': False, 'GAMEPAD1_BUTTON_Y': False, 'GAMEPAD1_BUTTON_GUIDE': False, 'GAMEPAD1_BUTTON_START': False, 'GAMEPAD1_BUTTON_LEFTSTICK': False,'GAMEPAD1_BUTTON_DPAD_UP': False, 'GAMEPAD1_BUTTON_DPAD_DOWN': False, 'GAMEPAD1_BUTTON_DPAD_LEFT': False, 'GAMEPAD1_BUTTON_DPAD_RIGHT': False}
