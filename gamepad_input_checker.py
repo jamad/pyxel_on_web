@@ -42,6 +42,8 @@ class App:
         pyxel.image(image_base).set(0, 0, my_img) # assigning string list to image(0)
         self.stick_L_X=0
         self.stick_L_Y=0
+        self.stick_R_X=0
+        self.stick_R_Y=0
         
 
         pyxel.run(self.update, self.draw)
@@ -66,6 +68,8 @@ class App:
 
             if x=='LEFTX':self.stick_L_X=value//2048
             if x=='LEFTY':self.stick_L_Y=value//2048
+            if x=='RIGHTX':self.stick_R_X=value//2048
+            if x=='RIGHTY':self.stick_R_Y=value//2048
             
         button='A B X Y BACK GUIDE START LEFTSTICK RIGHTSTICK LEFTSHOULDER RIGHTSHOULDER DPAD_UP DPAD_DOWN DPAD_LEFT DPAD_RIGHT'.split() # e f g h i z j k l m n o p q r
         for i,x in enumerate(button):
@@ -93,7 +97,9 @@ class App:
         pyxel.blt(5, 5, image_base, 0, 0, 16, 16, 0)         # gamepad base image
         pyxel.blt(5, 5, image_triggered, 0 ,0, 16, 16, 0)    # gamepad trigger image
 
+        pyxel.line(100+self.stick_L_X,100+self.stick_L_Y,135+self.stick_R_X,100+self.stick_R_Y,8)
         pyxel.line(100,100,100+self.stick_L_X,100+self.stick_L_Y,7)
+        pyxel.line(135,100,135+self.stick_R_X,100+self.stick_R_Y,7)
 
         pyxel.text(200,40, f'wip',  1)
 
