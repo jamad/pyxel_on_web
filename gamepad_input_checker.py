@@ -40,6 +40,9 @@ class App:
         pyxel.init(256, 512, title='gamepad input', display_scale=2)
 
         pyxel.image(image_base).set(0, 0, my_img) # assigning string list to image(0)
+        self.stick_L_X=0
+        self.stick_L_Y=0
+        
 
         pyxel.run(self.update, self.draw)
 
@@ -58,8 +61,11 @@ class App:
 
             keylist[i]=data_to_check
             myDict[data_to_check]= ' '*(0<=value)+f'{value:016b}'#formatted_string = f'{value:+016b}' if value >= 0 else f'{(1 << 16) + value:016b}'
-            myDict[data_to_check]= f'{value:+016b}' if value >= 0 else f'{(1 << 16) + value:016b}'
+            #myDict[data_to_check]= f'{value:+016b}' if value >= 0 else f'{(1 << 16) + value:016b}'
+            myDict[data_to_check]= f'{value}'
 
+            if x=='LEFTX':self.stick_L_X=value//2048
+            if x=='LEFTY':self.stick_L_Y=value//2048
             
         button='A B X Y BACK GUIDE START LEFTSTICK RIGHTSTICK LEFTSHOULDER RIGHTSHOULDER DPAD_UP DPAD_DOWN DPAD_LEFT DPAD_RIGHT'.split() # e f g h i z j k l m n o p q r
         for i,x in enumerate(button):
@@ -80,16 +86,14 @@ class App:
     def draw(self):
         pyxel.cls(0)
 
-        #myDict['']'GAMEPAD1_AXIS_LEFTX': 0, 'GAMEPAD1_AXIS_LEFTY': 0, 'GAMEPAD1_AXIS_RIGHTX': 0, 'GAMEPAD1_AXIS_RIGHTY':
-        #print(myDict)
-        #posx=
-
         # key state in text
         for i,data_to_check in keylist.items(): 
             pyxel.text(10,10+10*i+256, f'{data_to_check} : {myDict[data_to_check]}', myDict[data_to_check] and 7 or 2)
 
         pyxel.blt(5, 5, image_base, 0, 0, 16, 16, 0)         # gamepad base image
         pyxel.blt(5, 5, image_triggered, 0 ,0, 16, 16, 0)    # gamepad trigger image
+
+        pyxel.line(100,100,100+self.stick_L_X,100+self.stick_L_Y,7)
 
         pyxel.text(200,40, f'wip',  1)
 
