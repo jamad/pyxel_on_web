@@ -66,10 +66,10 @@ class App:
             #myDict[data_to_check]= f'{value:+016b}' if value >= 0 else f'{(1 << 16) + value:016b}'
             myDict[data_to_check]= f'{value}'
 
-            if x=='LEFTX':self.stick_L_X=value//2048
-            if x=='LEFTY':self.stick_L_Y=value//2048
-            if x=='RIGHTX':self.stick_R_X=value//2048
-            if x=='RIGHTY':self.stick_R_Y=value//2048
+            if x=='LEFTX':self.stick_L_X=value//4096
+            if x=='LEFTY':self.stick_L_Y=value//4096
+            if x=='RIGHTX':self.stick_R_X=value//4096
+            if x=='RIGHTY':self.stick_R_Y=value//4096
             
         button='A B X Y BACK GUIDE START LEFTSTICK RIGHTSTICK LEFTSHOULDER RIGHTSHOULDER DPAD_UP DPAD_DOWN DPAD_LEFT DPAD_RIGHT'.split() # e f g h i z j k l m n o p q r
         for i,x in enumerate(button):
