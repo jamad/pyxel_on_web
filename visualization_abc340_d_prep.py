@@ -15,6 +15,7 @@ BLUE = (0, 0, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
+margin = 6
 pts = []
 knots = []
 count = 0
@@ -25,14 +26,10 @@ clock = pygame.time.Clock()
 
 #Lagrange
 def lagrange():
-    
-    screen.fill(WHITE)
+    print('lagrange')
     #Line and rects
-    for i in range(count - 1):
-        pygame.draw.line(screen, GREEN, pts[i], pts[i+1], 3)
-    for i in range(count):
-        pygame.draw.rect(screen, BLUE, (pts[i][0] - margin, pts[i][1] - margin, 2 * margin, 2 * margin), 5)
-
+    for i in range(count - 1):        pygame.draw.line(screen, GREEN, pts[i], pts[i+1], 3)
+    for i in range(count):        pygame.draw.rect(screen, BLUE, (pts[i][0] - margin, pts[i][1] - margin, 2 * margin, 2 * margin), 5)
 
     for t in np.arange(0, len(pts)-1, 0.01):
         ptPlt = np.zeros(2, float)
@@ -47,53 +44,29 @@ def lagrange():
 
 def drawPolylines(color='GREEN', thick=3):
     if (count < 2): return
-    for i in range(count - 1):
-        pygame.draw.line(screen, color, pts[i], pts[i+1], thick)
-    for i in range(count):
-        pygame.draw.rect(screen, BLUE, (pts[i][0] - margin, pts[i][1] - margin, 2 * margin, 2 * margin), 5)
-        if(count > 2):
-            lagrange()
+    for i in range(count - 1):  pygame.draw.line(screen, color, pts[i], pts[i+1], thick)
+    for i in range(count):      pygame.draw.rect(screen, BLUE, (pts[i][0] - margin, pts[i][1] - margin, 2 * margin, 2 * margin), 5)
+    lagrange()
 
 done = False
-pressed = 0
-margin = 6
-old_pressed = 0
-old_button1 = 0
-old_button3 = 0
-
-selectedPoint = -1
-
 while not done:
-
-    time_passed = clock.tick(30)
-
-    for event in pygame.event.get():
-        pos = pygame.mouse.get_pos()
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            pressed = -1
-            if count > 2:  lagrange()
-                    
-        elif event.type == pygame.MOUSEBUTTONUP:    pressed = 1
-        elif event.type == pygame.QUIT:             done = True
-        else:                                       pressed = 0
-
-    button1, button2, button3 = pygame.mouse.get_pressed()
-    x, y = pygame.mouse.get_pos()
-    pt = [x, y]
-
-    if old_pressed == -1 and pressed == 1 and old_button1 == 1 and button1 == 0:
-        print('mouse click')
-        if x < 590:
-            pts.append(pt)
-            count += 1
-            pygame.draw.rect(screen, BLUE, (pt[0] - margin, pt[1] - margin, 2 * margin, 2 * margin), 5)
     
-    if len(pts) > 1:
-        drawPolylines(GREEN, 3)
+    time_passed = clock.tick(60)
+    for event in pygame.event.get():
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print('mouse click')
+            x, y = pygame.mouse.get_pos()
+            pt = [x, y]
+            if x < 590:
+                pts.append(pt)
+                count += 1
+                
+                pygame.draw.rect(screen, BLUE, (pt[0] - margin, pt[1] - margin, 2 * margin, 2 * margin), 5)      
+
+            if len(pts) > 1:
+                screen.fill(WHITE)
+                drawPolylines(GREEN, 3)
+        elif event.type == pygame.QUIT:             done = True
 
     pygame.display.update()
-    old_button1 = button1
-    old_pressed = pressed
-    old_button3 = button3
-
 pygame.quit()
