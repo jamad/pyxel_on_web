@@ -22,32 +22,27 @@ clock = pygame.time.Clock()
 
 
 done = False
-
-
 screen.fill(WHITE)
 while not done:
-    
     time_passed = clock.tick(60)
+
     for event in pygame.event.get():
         if event.type == pygame.MOUSEBUTTONDOWN:
-            print('mouse click')
+            screen.fill(WHITE)
+            # add point
+            count += 1
             x, y = pygame.mouse.get_pos()
-            pt = [x, y]
-            if x < 590:
-                pts.append(pt)
-                count += 1
-                
-                pygame.draw.rect(screen, BLUE, (pt[0] - margin, pt[1] - margin, 2 * margin, 2 * margin), 5)      
+            pygame.draw.rect(screen, BLUE, (x - margin, y - margin, 2 * margin, 2 * margin), 2)      
+            pts.append([x, y])
 
-            if 2<=count: # points to join
-                screen.fill(WHITE)
+            if 2<=count: # edge exists
 
-                #lagrange
-                for t in np.arange(0, len(pts)-1, 0.01):
+                #lagrange core
+                for t in np.arange(0, len(pts)-1, 0.01): # is this drawing 100 *num_points !!!!
                     ptPlt = np.zeros(2, float)
-                    for i in np.arange(0, len(pts), 1):
+                    for i in range(len(pts)):
                         num, den = 1, 1
-                        for j in np.arange(0, len(pts), 1):
+                        for j in range(len(pts)):
                             if j != i:
                                 num = num * (t - j)
                                 den = den * (i - j)
@@ -55,9 +50,8 @@ while not done:
                     pygame.draw.circle(screen, RED, ptPlt.astype(int), 3)
 
                 #Line and rects
-                for i in range(count - 1):  pygame.draw.line(screen, 'GREEN', pts[i], pts[i+1], 3)
-
-                for x,y in pts:pygame.draw.rect(screen, BLUE, (x - margin, y - margin, 2 * margin, 2 * margin), 5)
+                for p1,p2 in zip(pts,pts[1:]):pygame.draw.line(screen, 'GREEN', p1, p2, 2)
+                for x,y in pts:pygame.draw.rect(screen, BLUE, (x-margin, y-margin, 2*margin, 2*margin), 2)
 
         elif event.type == pygame.QUIT:             done = True
 
