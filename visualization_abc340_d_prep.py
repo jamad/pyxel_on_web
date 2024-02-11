@@ -38,7 +38,7 @@ while not done:
             if 2<=count: # edge exists
 
                 #lagrange core
-                for t in np.arange(0, len(pts)-1, 0.1): # is this drawing 100 *num_points !!!! 
+                for t in np.arange(0, len(pts)-1, 0.02): # is this drawing 100 *num_points !!!! 
                     ptPlt = np.zeros(2, float)
                     for i in range(len(pts)):
                         num, den = 1, 1
@@ -47,7 +47,10 @@ while not done:
                                 num *=(t - j)
                                 den *=(i - j)
                         ptPlt = ptPlt + np.dot(pts[i], num/den)
-                    pygame.draw.circle(screen, RED, ptPlt.astype(int), 3) # why circle ?? 
+                    #pygame.draw.circle(screen, RED, ptPlt.astype(int), 1) # why circle actually dot is fine 
+                    
+                    screen.set_at(ptPlt.astype(int), RED)
+
 
                 #Line and rects
                 for p1,p2 in zip(pts,pts[1:]):pygame.draw.line(screen, 'GREEN', p1, p2, 2)
