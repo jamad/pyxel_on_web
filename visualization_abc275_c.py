@@ -18,7 +18,7 @@ S='''\
 class App():
     def __init__(self):
 
-        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=6, display_scale=2) # column M for x , row N for y 
+        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=2, display_scale=2) # column M for x , row N for y 
 
         # my code
         self.r_now, self.c_now = r,c=0,0
@@ -45,33 +45,8 @@ class App():
                             if S[u][v]=='.':continue    
                             self.Z.append((c*8,r*8,v*8,u*8))
 
-        self.pos=self.Z.pop(0)
+        self.pos=self.Z.pop(0) # iteration of the next line 
     
-        '''
-        if not self.Q:return # alredy logic is done, no need to calc
-
-        r,c,d=self.Q.pop()
-
-        self.r_now, self.c_now = r,c # update for draw()
-        
-        # when player stops, can try 4 direction
-        if d=='S' and (r,c) not in self.DONE: # try U,R,D,L 
-            for x in 'URDL':self.Q.append( (r,c,x))
-            self.DONE.add((r,c))
-        elif d=='U':
-            self.Q.append( S[r-1][c]=='.' and (r-1,c,d) or (r,c,'S'))
-        elif d=='R':
-            self.Q.append( S[r][c+1]=='.' and (r,c+1,d) or (r,c,'S'))
-        elif d=='D':
-            self.Q.append( S[r+1][c]=='.' and (r+1,c,d) or (r,c,'S'))
-        elif d=='L':
-            self.Q.append( S[r][c-1]=='.' and (r,c-1,d) or (r,c,'S'))
-
-        # passable position can be registered
-        if S[r][c]=='.':
-            self.ANS.add((r,c))
-            self.T[r][c]='o' # data update
-        '''
 
     def draw(self):
         pyxel.cls(0)
