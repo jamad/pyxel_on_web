@@ -18,7 +18,7 @@ S='''\
 class App():
     def __init__(self):
 
-        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=2, display_scale=2) # column M for x , row N for y 
+        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=15, display_scale=2) # column M for x , row N for y 
 
         # my code
         self.r_now, self.c_now = r,c=0,0
@@ -29,27 +29,29 @@ class App():
         self.T=[list(s) for s in S]
 
         self.Z=[]
+        for r in range(9):
+            for c in range(9):
+                if S[r][c]=='.':continue    
+                for u in range(9):
+                    for v in range(9):
+                        if (r,c)==(u,v):continue
+                        if S[u][v]=='.':continue    
+                        self.Z.append((c,r,v,u))
+
         self.pos=(0,0,0,0)
             
 
         pyxel.run( update=self.update, draw=self.draw)
 
     def update(self):
-        if not self.Z:
-            for r in range(9):
-                for c in range(9):
-                    if S[r][c]=='.':continue    
-                    for u in range(9):
-                        for v in range(9):
-                            if (r,c)==(u,v):continue
-                            if S[u][v]=='.':continue    
-
-                            self.Z.append((c*8,r*8,v*8,u*8))
+        if not self.Z:return 
 
         self.pos=self.Z.pop(0) # iteration of the next line 
     
 
     def draw(self):
+        def drawline(a,b,c,d):
+            pyxel.line(a*8,b*8,c*8,d*8,4) # drawing line
         pyxel.cls(0)
 
         for r in range(len(S)):
@@ -64,11 +66,29 @@ class App():
 
         x,y,u,v=self.pos
         dx,dy=u-x,v-y
-        pyxel.line(x,y,u,v,4) # drawing line
-        pyxel.line(x+dy,y-dx,u+dy,v-dx,5)
-        pyxel.line(x-dy,y+dx,u-dy,v+dx,5)
+        drawline(x,y,u,v)# drawing line
+        x1,y1,u1,v1=x+dy,y-dx,u+dy,v-dx
+        drawline(x1,y1,u1,v1)# drawing line
+        x2,y2,u2,v2=x-dy,y+dx,u-dy,v+dx
+        drawline(x2,y2,u2,v2)# drawing line
 
-        print(*self.pos)
+        try:
+            print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
+            if S[y1][x1]==S[v1][u1]=='#':
+                data=sorted([(y1,x1),(v1,u1),(y,x),(v,u)])
+                self.ANS.add(tuple(data))
+        except:
+            pass
+
+        try:
+            if S[y2][x2]==S[v2][u2]=='#':
+                data=sorted([(y2,x2),(v2,u2),(y,x),(v,u)])
+                self.ANS.add(tuple(data))
+        except:
+            pass
+
+
+        #print(*self.pos)
 
         pyxel.text(50, 180, self.Q and  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
         
