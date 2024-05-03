@@ -4,6 +4,8 @@
 * alt+0 to show fps ,update time, draw time
 
 
+# note
+* visualization_abc275_c.py を作成したので統合しよう。 ymd20240504
 
 |playable content |preview|code|
 |-|-|-|
