@@ -43,6 +43,7 @@ class App():
                         for v in range(9):
                             if (r,c)==(u,v):continue
                             if S[u][v]=='.':continue    
+
                             self.Z.append((c*8,r*8,v*8,u*8))
 
         self.pos=self.Z.pop(0) # iteration of the next line 
@@ -61,7 +62,12 @@ class App():
                 #pyxel.text(r*8,c*8, self.T[r][c],col) # wrong layout
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
 
-        pyxel.line(*self.pos,4) # drawing line
+        x,y,u,v=self.pos
+        dx,dy=u-x,v-y
+        pyxel.line(x,y,u,v,4) # drawing line
+        pyxel.line(x+dy,y-dx,u+dy,v-dx,5)
+        pyxel.line(x-dy,y+dx,u-dy,v+dx,5)
+
         print(*self.pos)
 
         pyxel.text(50, 180, self.Q and  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
