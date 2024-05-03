@@ -18,20 +18,36 @@ S='''\
 class App():
     def __init__(self):
 
-        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=60, display_scale=3) # column M for x , row N for y 
+        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=6, display_scale=2) # column M for x , row N for y 
 
         # my code
-        r,c=1,1
+        self.r_now, self.c_now = r,c=0,0
         d='S' # direction S(stop), U, R, D, L
         self.Q=[(r,c,d)]
         self.ANS=set()
         self.DONE=set()
         self.T=[list(s) for s in S]
 
+        self.Z=[]
+        self.pos=(0,0,0,0)
+            
+
         pyxel.run( update=self.update, draw=self.draw)
 
     def update(self):
+        if not self.Z:
+            for r in range(9):
+                for c in range(9):
+                    if S[r][c]=='.':continue    
+                    for u in range(9):
+                        for v in range(9):
+                            if (r,c)==(u,v):continue
+                            if S[u][v]=='.':continue    
+                            self.Z.append((c*8,r*8,v*8,u*8))
 
+        self.pos=self.Z.pop(0)
+    
+        '''
         if not self.Q:return # alredy logic is done, no need to calc
 
         r,c,d=self.Q.pop()
@@ -55,7 +71,7 @@ class App():
         if S[r][c]=='.':
             self.ANS.add((r,c))
             self.T[r][c]='o' # data update
-            
+        '''
 
     def draw(self):
         pyxel.cls(0)
@@ -69,6 +85,9 @@ class App():
                 
                 #pyxel.text(r*8,c*8, self.T[r][c],col) # wrong layout
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
+
+        pyxel.line(*self.pos,4) # drawing line
+        print(*self.pos)
 
         pyxel.text(50, 180, self.Q and  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
         
