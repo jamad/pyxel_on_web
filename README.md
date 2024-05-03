@@ -6,6 +6,7 @@
 
 # note
 * visualization_abc275_c.py を作成したので統合しよう。 ymd20240504
+* ![image](https://github.com/jamad/pyxel_on_web/assets/949913/5e9f7b0b-3e97-433e-ac24-5df81d20fae7)
 
 
 
