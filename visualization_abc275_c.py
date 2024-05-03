@@ -18,7 +18,7 @@ S='''\
 class App():
     def __init__(self):
 
-        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=60, display_scale=2) # column M for x , row N for y 
+        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=60, display_scale=3) # column M for x , row N for y 
 
         # my code
         r,c=1,1
