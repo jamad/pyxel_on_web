@@ -7,6 +7,8 @@
 # note
 * visualization_abc275_c.py を作成したので統合しよう。 ymd20240504
 
+
+
 |playable content |preview|code|
 |-|-|-|
 |[gamepad_input_checker (don't knwo what GUIDE means yet)](https://kitao.github.io/pyxel/wasm/launcher/?run=jamad.pyxel_on_web.gamepad_input_checker&gamepad=enabled) |![pyxel-20230728-113716](https://github.com/jamad/pyxel_on_web/assets/949913/1ff7eb51-d287-4df3-914e-57bf10228539)|[code](https://github.com/jamad/pyxel_on_web/blob/main/gamepad_input_checker.py)|
