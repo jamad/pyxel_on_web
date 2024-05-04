@@ -68,8 +68,6 @@ S='''\
 #########
 '''.split('\n')
 
-
-
 class App():
     def __init__(self):
 
@@ -139,7 +137,9 @@ class App():
             drawline(r2,c2,r4,c4,7)# drawing line
             drawline(r3,c3,r4,c4,7)# drawing line
 
+        pyxel.text(50, 180,  f'IN PROGRESS ... found : {self.ans-len(self.Z)}',7)
 
-        pyxel.text(50, 180,  f'IN PROGRESS ... found : {self.ans}' or f'FINISHED : answer = {self.ans}',7)
+
+
         
 App()
