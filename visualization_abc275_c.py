@@ -21,11 +21,8 @@ class App():
         pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=15, display_scale=2) # column M for x , row N for y 
 
         # my code
-        self.r_now, self.c_now = r,c=0,0
-        d='S' # direction S(stop), U, R, D, L
-        self.Q=[(r,c,d)]
+        self.pos=(0,0,0,0) # 2points for line
         self.ANS=set()
-        self.DONE=0
         self.T=[list(s) for s in S]
 
         self.Z=[]
@@ -38,9 +35,6 @@ class App():
                         if S[u][v]=='.':continue    
                         self.Z.append((c,r,v,u))
 
-        self.pos=(0,0,0,0)
-            
-
         pyxel.run( update=self.update, draw=self.draw)
 
     def update(self):
@@ -50,8 +44,6 @@ class App():
     
 
     def draw(self):
-        def drawline(a,b,c,d):
-            pyxel.line(a*8,b*8,c*8,d*8,4) # drawing line
 
         pyxel.cls(0)
 
@@ -60,12 +52,11 @@ class App():
                 col=6
                 if self.T[r][c]=='o':col=3
                 if self.T[r][c]=='#':col=2
-                if self.r_now==r and self.c_now==c:col=7
-                
-                #pyxel.text(r*8,c*8, self.T[r][c],col) # wrong layout
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
         
         if self.Z:
+            def drawline(a,b,c,d):pyxel.line(a*8,b*8,c*8,d*8,4) # drawing line
+
             x,y,u,v=self.pos
             dx,dy=u-x,v-y
             drawline(x,y,u,v)# drawing line
@@ -75,7 +66,7 @@ class App():
             drawline(x2,y2,u2,v2)# drawing line
 
             try:
-                print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
+                #print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
                 if S[y1][x1]==S[v1][u1]=='#':
                     data=sorted([(y1,x1),(v1,u1),(y,x),(v,u)])
                     self.ANS.add(tuple(data))
@@ -92,6 +83,6 @@ class App():
 
         #print(*self.pos)
 
-        pyxel.text(50, 180, self.Q and  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
+        pyxel.text(50, 180,  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
         
 App()
