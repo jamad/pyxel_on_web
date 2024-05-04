@@ -15,29 +15,103 @@ S='''\
 .........
 '''.split('\n')
 
+S='''\
+##.......
+##.......
+.........
+.......#.
+.....#...
+........#
+......#..
+.........
+.........
+'''.split('\n')
+
+
+S='''\
+.#.#..#..
+###..#.#.
+###.....#
+..##.....
+.##.##..#
+###.#.##.
+##...#.##
+.##....#.
+..#.#.#.#
+'''.split('\n')
+
+
+
+S='''\
+....#...#
+..#..#..#
+.........
+...#.....
+.#.......
+.........
+.#.......
+.........
+...#.....
+'''.split('\n')
+
+
+
+S='''\
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+#########
+'''.split('\n')
+
+
+
 class App():
     def __init__(self):
 
-        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=15, display_scale=2) # column M for x , row N for y 
+        pyxel.init(256,256 + 25, title='atcoder abc275 C', fps=60, display_scale=2) # column M for x , row N for y 
 
         # my code
         self.pos=(0,0,0,0) # 2points for line
         self.ANS=set()
         self.T=[list(s) for s in S]
 
-        self.Z=[]
-        for r in range(9):
-            for c in range(9):
-                if S[r][c]=='.':continue    
-                for u in range(9):
-                    for v in range(9):
-                        if (r,c)==(u,v):continue
-                        if S[u][v]=='.':continue    
-                        self.Z.append((c,r,v,u))
+        self.Z=set()
+
+        for r1 in range(9):
+            for c1 in range(9):
+                if S[r1][c1]=='.':continue
+                for r2 in range(r1,9):
+                    for c2 in range(c1,9):
+                        if S[r2][c2]=='.':continue  
+                        if (r1,c1)==(r2,c2):continue
+                    
+                        dr,dc=r2-r1,c2-c1
+                        
+                        r3,c3=r1+dc,c1-dr
+                        r4,c4=r2+dc,c2-dr
+                        
+                        r5,c5=r1-dc,c1+dr
+                        r6,c6=r2-dc,c2+dr
+
+                        for a,b,c,d in ((r3,c3,r4,c4),(r5,c5,r6,c6)):
+                            if not all(0<=p<9 for p in (a,b,c,d)):continue
+                            if not S[a][b]==S[c][d]=='#':continue
+                            data=sorted([(a,b),(c,d),(r1,c1),(r2,c2)])
+                            self.Z.add(tuple(data))
+        
+        self.Z=sorted(self.Z)
+
+        self.ans=len(self.Z)
 
         pyxel.run( update=self.update, draw=self.draw)
 
     def update(self):
+
         if not self.Z:return 
 
         self.pos=self.Z.pop(0) # iteration of the next line 
@@ -55,27 +129,17 @@ class App():
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
         
         if self.Z:
+            #self.ans+=1
+
             def drawline(a,b,c,d,col):pyxel.line(a*8,b*8,c*8,d*8,col) # drawing line
 
-            x,y,u,v=self.pos
-            dx,dy=u-x,v-y
-            drawline(x,y,u,v,4)# drawing line
-            x1,y1,u1,v1=x+dy,y-dx,u+dy,v-dx
-            x2,y2,u2,v2=x-dy,y+dx,u-dy,v+dx
+            (r1,c1),(r2,c2),(r3,c3),(r4,c4)=self.pos
+            drawline(r1,c1,r2,c2,4)# drawing line
+            drawline(r1,c1,r3,c3,7)# drawing line
+            drawline(r2,c2,r4,c4,7)# drawing line
+            drawline(r3,c3,r4,c4,7)# drawing line
 
-            for a,b,c,d in ((x1,y1,u1,v1),(x2,y2,u2,v2)):
-                try:
-                    #print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
-                    if S[b][a]==S[d][c]=='#':
-                        data=sorted([(b,a),(d,c),(y,x),(v,u)])
-                        self.ANS.add(tuple(data))
-                        
-                        drawline(a,b,c,d,7)# drawing line
-                        
-                except:
-                    drawline(a,b,c,d,5)# drawing line
-                    pass
 
-        pyxel.text(50, 180,  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
+        pyxel.text(50, 180,  f'IN PROGRESS ... found : {self.ans}' or f'FINISHED : answer = {self.ans}',7)
         
 App()
