@@ -55,33 +55,26 @@ class App():
                 pyxel.text(c*8,r*8, self.T[r][c],col) # c for x , r for y
         
         if self.Z:
-            def drawline(a,b,c,d):pyxel.line(a*8,b*8,c*8,d*8,4) # drawing line
+            def drawline(a,b,c,d,col):pyxel.line(a*8,b*8,c*8,d*8,col) # drawing line
 
             x,y,u,v=self.pos
             dx,dy=u-x,v-y
-            drawline(x,y,u,v)# drawing line
+            drawline(x,y,u,v,4)# drawing line
             x1,y1,u1,v1=x+dy,y-dx,u+dy,v-dx
-            drawline(x1,y1,u1,v1)# drawing line
             x2,y2,u2,v2=x-dy,y+dx,u-dy,v+dx
-            drawline(x2,y2,u2,v2)# drawing line
 
-            try:
-                #print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
-                if S[y1][x1]==S[v1][u1]=='#':
-                    data=sorted([(y1,x1),(v1,u1),(y,x),(v,u)])
-                    self.ANS.add(tuple(data))
-            except:
-                pass
-
-            try:
-                if S[y2][x2]==S[v2][u2]=='#':
-                    data=sorted([(y2,x2),(v2,u2),(y,x),(v,u)])
-                    self.ANS.add(tuple(data))
-            except:
-                pass
-
-
-        #print(*self.pos)
+            for a,b,c,d in ((x1,y1,u1,v1),(x2,y2,u2,v2)):
+                try:
+                    #print(S[y1][x1],S[v1][u1],S[y1][x1]==S[v1][u1]=='#')
+                    if S[b][a]==S[d][c]=='#':
+                        data=sorted([(b,a),(d,c),(y,x),(v,u)])
+                        self.ANS.add(tuple(data))
+                        
+                        drawline(a,b,c,d,7)# drawing line
+                        
+                except:
+                    drawline(a,b,c,d,5)# drawing line
+                    pass
 
         pyxel.text(50, 180,  f'IN PROGRESS ... found : {len(self.ANS)}' or f'FINISHED : answer = {len(self.ANS)}',7)
         
